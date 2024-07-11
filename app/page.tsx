@@ -1,9 +1,13 @@
-import Image from "next/image";
+import HeroSection from "@/components/custom_ui/Header";
+import Projects from "./projects/_components/Projects";
+import AboutMe from "./about/_components/AboutMe";
 
 export default function Home() {
   return (
     <main>
-      <h1>Hello world!</h1>
+      <HeroSection />
+      <AboutMe />
+      <Projects />
     </main>
   );
 }
