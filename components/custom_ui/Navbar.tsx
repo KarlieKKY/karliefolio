@@ -10,7 +10,7 @@ export default function NavBar() {
 
   return (
     <nav className=" text-white bg-stone-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div>
@@ -49,7 +49,7 @@ export default function NavBar() {
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
-              <Button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+              <Button className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-500 hover:from-10% hover:via-sky-500 hover:via-30% hover:to-emerald-500 hover:to-90% text-white font-bold py-2 px-4 rounded">
                 Music
               </Button>
             </div>
