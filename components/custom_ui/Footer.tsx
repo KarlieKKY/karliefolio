@@ -1,8 +1,11 @@
 export default function Footer() {
   return (
-    <div className="text-white">
-      <h1>footer section</h1>
-      <p>hhhhhhhhhhhhhhhhhh</p>
-    </div>
+    <footer className="bg-neutral-900">
+      <div className="text-white">
+        <p>social media icons</p>
+        <p>copyright</p>
+        <p>© 2024 Karlie Guan. All rights reserved.</p>
+      </div>
+    </footer>
   );
 }
