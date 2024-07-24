@@ -5,15 +5,8 @@ import { projects } from "@/utils/project-data";
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import ProjectCarousel from "./ProjectCarousel";
+import getTechIconPath from "@/utils/techIcon-mapper";
 
 export default function Projects() {
   return (
@@ -50,16 +43,17 @@ export default function Projects() {
                 <h3 className="text-lg font-semibold mb-2">{project.name}</h3>
                 <p className="text-gray-700 mb-4">{project.description}</p>
                 <div className="flex flex-row space-x-2 mb-4">
-                  {project.tech.map((tech, idx) => (
+                  {project.tech.map((tech: string, idx) => (
                     <div
                       key={idx}
                       // className="text-sm text-gray-600 bg-gray-200 px-2 py-1 rounded"
                     >
                       <Image
-                        src="/logos/nodejs/nodejs.svg"
-                        alt="Node.js Icon"
+                        src={getTechIconPath(tech)}
+                        alt={`${tech} Icon`}
                         width={23}
                         height={23}
+                        style={{ width: "23px", height: "23px" }}
                       />
                     </div>
                   ))}
