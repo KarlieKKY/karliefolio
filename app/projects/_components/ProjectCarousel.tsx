@@ -2,33 +2,27 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { projects } from "@/utils/project-data";
+import getTechIconPath from "@/utils/techIcon-mapper";
 
-const images = [
-  "/images/thumbnail-decorating.jpg",
-  "/images/thumbnail-decorating.jpg",
-  "/images/thumbnail-decorating.jpg",
-  "/images/thumbnail-decorating.jpg",
-  "/images/thumbnail-decorating.jpg",
-];
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 export default function ProjectCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
     );
   };
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
     );
   };
 
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
   return (
     <div>
       <div
@@ -37,8 +31,8 @@ export default function ProjectCarousel() {
         data-carousel="slide"
       >
         {/* Carousel wrapper */}
-        <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-          {images.map((src, index) => (
+        <div className="relative h-56 overflow-hidden md:h-96">
+          {projects.map((project, index) => (
             <div
               key={index}
               className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
@@ -47,7 +41,7 @@ export default function ProjectCarousel() {
               data-carousel-item={index === currentIndex}
             >
               <Image
-                src={src}
+                src={project.imageUrl}
                 alt={`Slide ${index + 1}`}
                 layout="fill"
                 className="block w-full object-cover"
@@ -55,22 +49,54 @@ export default function ProjectCarousel() {
             </div>
           ))}
         </div>
-        {/* Slider indicators */}
-        {/* <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              type="button"
-              className={`w-3 h-3 rounded-full ${
-                index === currentIndex ? "bg-white" : "bg-gray-300"
-              }`}
-              aria-current={index === currentIndex}
-              aria-label={`Slide ${index + 1}`}
-              data-carousel-slide-to={index}
-              onClick={() => goToSlide(index)}
-            ></button>
-          ))}
-        </div> */}
+        {/* Project Info */}
+        <div>
+          <div className="flex items-center justify-between mb-2">
+            <div className="text-xs">
+              <span className="text-red-500">
+                {projects[currentIndex].category}
+              </span>
+              &nbsp;|&nbsp; {projects[currentIndex].date}
+            </div>
+          </div>
+          <h3 className="text-lg font-semibold">
+            {projects[currentIndex].name}
+          </h3>
+          <p className="text-sm">{projects[currentIndex].description}</p>
+          <div className="flex flex-row space-x-2 mb-4">
+            {projects[currentIndex].tech.map((tech, index) => (
+              <div key={index}>
+                <Image
+                  src={getTechIconPath(tech)}
+                  alt={`${tech} Icon`}
+                  width={18}
+                  height={18}
+                  style={{ width: "18px", height: "18px" }}
+                />
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-row space-x-2">
+            <a
+              href={projects[currentIndex].github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" className="bg-transparent">
+                Github
+              </Button>
+            </a>
+            <a
+              href={projects[currentIndex].demo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" className="bg-transparent">
+                Demo
+              </Button>
+            </a>
+          </div>
+        </div>
         {/* Slider controls */}
         <div className="flex justify-center mt-4">
           <button

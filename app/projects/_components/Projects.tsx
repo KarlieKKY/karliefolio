@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { CornerDownRight } from "lucide-react";
+import Image from "next/image";
 
 import { projects } from "@/utils/project-data";
-
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import ProjectCarousel from "./ProjectCarousel";
 import getTechIconPath from "@/utils/techIcon-mapper";
+
+import ProjectCarousel from "./ProjectCarousel";
+import { CornerDownRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Projects() {
   return (
