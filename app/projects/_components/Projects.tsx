@@ -8,7 +8,13 @@ import ProjectCarousel from "./ProjectCarousel";
 import { CornerDownRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function Projects() {
+interface ProjectsProps {
+  showAll?: boolean;
+}
+
+export default function Projects({ showAll = false }: ProjectsProps) {
+  const projectsToShow = showAll ? projects : projects.slice(0, 3);
+
   return (
     <section className="py-8 bg-orange-50">
       <div className="px-4 sm:px-6 lg:px-8">
@@ -25,7 +31,7 @@ export default function Projects() {
           </Link>
         </div>
         <div className="hidden md:grid gap-7 md:grid-cols-3">
-          {projects.slice(0, 3).map((project, index) => (
+          {projectsToShow.map((project, index) => (
             <div key={index} className="overflow-hidden">
               <div className="w-full h-48 relative">
                 <Image
@@ -53,7 +59,7 @@ export default function Projects() {
                         alt={`${tech} Icon`}
                         width={23}
                         height={23}
-                        style={{ width: "23px", height: "23px" }}
+                        style={{ width: "auto", height: "23px" }}
                       />
                     </div>
                   ))}

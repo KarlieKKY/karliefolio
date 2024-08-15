@@ -53,7 +53,7 @@ export default function ProjectCarousel() {
         <div>
           <div className="flex items-center justify-between mb-2">
             <div className="text-xs">
-              <span className="text-red-500">
+              <span className="text-red-500 uppercase">
                 {projects[currentIndex].category}
               </span>
               &nbsp;|&nbsp; {projects[currentIndex].date}
@@ -71,7 +71,7 @@ export default function ProjectCarousel() {
                   alt={`${tech} Icon`}
                   width={18}
                   height={18}
-                  style={{ width: "18px", height: "18px" }}
+                  style={{ width: "auto", height: "18px" }}
                 />
               </div>
             ))}

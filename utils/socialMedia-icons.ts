@@ -5,5 +5,5 @@ type SocialMediaIcons = {
 export const socialMediaIcons: SocialMediaIcons = {
   linkedin: "/logos/linkedin/linkedin.svg",
   github: "/logos/github/github.svg",
-  medium: "/logos/github/github.svg",
+  medium: "/logos/medium/medium-icon.svg",
 };

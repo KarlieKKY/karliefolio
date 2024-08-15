@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <section>
       <h1>project</h1>
-      <Projects />
+      <Projects showAll={true} />
     </section>
   );
 }
