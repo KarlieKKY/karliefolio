@@ -16,18 +16,9 @@ export const projects: Project[] = [
     date: "last year",
     description:
       "Managing game data with PostgreSQL, providing APIs, Jest-tested, ensuring smooth operations across environments.",
-    tech: [
-      "js",
-      "nodejs",
-      "express",
-      "postgresql",
-      "jest",
-      "husky",
-      "supertest",
-      "pgFormat",
-    ],
-    github: "https://github.com/KarlieKKY/nc-games.git",
-    demo: "https://nc-games-s0lm.onrender.com/api",
+    tech: ["ts", "nextjs", "nodejs", "socketio", "tailwindcss", "openai"],
+    github: "https://github.com/KarlieKKY/next-chat-app.git",
+    demo: "https://github.com/KarlieKKY/next-chat-app.git",
     imageUrl: "/images/thumbnail-decorating.jpg",
   },
   {

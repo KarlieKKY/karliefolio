@@ -5,9 +5,9 @@ export default function HeroSection() {
     <div className="bg-black text-white">
       <Image
         src="/images/banner.JPG"
-        alt="header"
+        alt="banner-img"
         className="block w-full object-cover"
-        width={80}
+        width={1080}
         height={384}
       />
     </div>

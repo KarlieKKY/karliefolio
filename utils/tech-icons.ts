@@ -11,4 +11,5 @@ export const techIcons: TechIcons = {
   husky: "/logos/postgresql/postgresql.svg",
   supertest: "/logos/postgresql/postgresql.svg",
   pgformat: "/logos/postgresql/postgresql.svg",
+  ts: "/logos/ts/ts.svg",
 };
