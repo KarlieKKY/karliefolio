@@ -16,8 +16,8 @@ export default function Projects({ showAll = false }: ProjectsProps) {
   const projectsToShow = showAll ? projects : projects.slice(0, 3);
 
   return (
-    <section className="py-8 bg-orange-50">
-      <div className="px-4 sm:px-6 lg:px-8">
+    <section className="py-8 bg-orange-50 3xl:py-16">
+      <div className="px-4 sm:px-6 lg:px-12 3xl:px-48">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-3xl font-bold text-gray-900 uppercase">
             projects
