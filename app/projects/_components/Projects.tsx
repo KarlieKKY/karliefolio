@@ -5,6 +5,7 @@ import { projects } from "@/utils/project-data";
 import getTechIconPath from "@/utils/techIcon-mapper";
 
 import ProjectCarousel from "./ProjectCarousel";
+import AllProjects from "./AllProjects";
 import { CornerDownRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -89,7 +90,11 @@ export default function Projects({ showAll = false }: ProjectsProps) {
           ))}
         </div>
         <div className="md:hidden">
-          <ProjectCarousel projectsToShow={projectsToShow} />
+          {showAll ? (
+            <AllProjects />
+          ) : (
+            <ProjectCarousel projectsToShow={projectsToShow} />
+          )}
         </div>
       </div>
     </section>
