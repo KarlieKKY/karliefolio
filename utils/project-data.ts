@@ -15,7 +15,7 @@ export const projects: Project[] = [
     category: "Full-stack",
     date: "last year",
     description:
-      "Managing game data with PostgreSQL, providing APIs, Jest-tested, ensuring smooth operations across environments.",
+      "Streams and transcribes speech in real-time, offering seamless interaction with live text rendering for instant feedback.",
     tech: [
       "nextjs",
       "ts",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     category: "full-stack",
     date: "last year",
     description:
-      "Managing game data with PostgreSQL, providing APIs, Jest-tested, ensuring smooth operations across environments.",
+      "A study tool imports PDFs, generates 10 questions by analyzing related content, and allows users to answer and receive instant marks.",
     tech: [
       "nextjs",
       "ts",
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     category: "full-stack",
     date: "last year",
     description:
-      "Managing game data with PostgreSQL, providing APIs, Jest-tested, ensuring smooth operations across environments.",
+      "A CV generator crafts personalized cover letters by analyzing user details, company info, and job descriptions, streamlining job application processes.",
     tech: [
       "python",
       "streamlit",
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     category: "full-stack",
     date: "last year",
     description:
-      "Managing game data with PostgreSQL, providing APIs, Jest-tested, ensuring smooth operations across environments.",
+      "A 2D game where users interact with stray cats, raising awareness about the challenges these animals face in real life.",
     tech: ["python", "pygame", "flask", "openai", "postgresql"],
     github: "https://github.com/KarlieKKY/nc-games.git",
     demo: "https://nc-games-s0lm.onrender.com/api",
@@ -91,7 +91,7 @@ export const projects: Project[] = [
     category: "frontend",
     date: "last year",
     description:
-      "Managing game data with PostgreSQL, providing APIs, Jest-tested, ensuring smooth operations across environments.",
+      "A responsive forum frontend lets users like, dislike, and comment, featuring conditional rendering and functionality similar to Reddit for dynamic interactions.",
     tech: ["js", "vite", "reactjs", "axios"],
     github: "https://github.com/KarlieKKY/nc-games.git",
     demo: "https://nc-games-s0lm.onrender.com/api",
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     category: "BACKEND",
     date: "last year",
     description:
-      "Managing game data with PostgreSQL, providing APIs, Jest-tested, ensuring smooth operations across environments.",
+      "A forum backend allows users to like, dislike, comment, and more, providing functionality similar to Reddit for engaging discussions.",
     tech: [
       "js",
       "nodejs",
