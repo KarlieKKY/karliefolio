@@ -89,7 +89,7 @@ export default function Projects({ showAll = false }: ProjectsProps) {
           ))}
         </div>
         <div className="md:hidden">
-          <ProjectCarousel />
+          <ProjectCarousel projectsToShow={projectsToShow} />
         </div>
       </div>
     </section>

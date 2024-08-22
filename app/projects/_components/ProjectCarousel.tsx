@@ -2,24 +2,40 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import { projects } from "@/utils/project-data";
 import getTechIconPath from "@/utils/techIcon-mapper";
 
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function ProjectCarousel() {
+type Project = {
+  name: string;
+  category: string;
+  date: string;
+  description: string;
+  tech: string[];
+  imageUrl: string;
+  github: string;
+  demo: string;
+};
+
+interface ProjectCarouselProps {
+  projectsToShow: Project[];
+}
+
+export default function ProjectCarousel({
+  projectsToShow,
+}: ProjectCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+      prevIndex === 0 ? projectsToShow.length - 1 : prevIndex - 1
     );
   };
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+      prevIndex === projectsToShow.length - 1 ? 0 : prevIndex + 1
     );
   };
 
@@ -32,7 +48,7 @@ export default function ProjectCarousel() {
       >
         {/* Carousel wrapper */}
         <div className="relative h-56 overflow-hidden md:h-96">
-          {projects.map((project, index) => (
+          {projectsToShow.map((project, index) => (
             <div
               key={index}
               className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
@@ -54,17 +70,17 @@ export default function ProjectCarousel() {
           <div className="flex items-center justify-between mb-2">
             <div className="text-xs">
               <span className="text-red-500 uppercase">
-                {projects[currentIndex].category}
+                {projectsToShow[currentIndex].category}
               </span>
-              &nbsp;|&nbsp; {projects[currentIndex].date}
+              &nbsp;|&nbsp; {projectsToShow[currentIndex].date}
             </div>
           </div>
           <h3 className="text-lg font-semibold">
-            {projects[currentIndex].name}
+            {projectsToShow[currentIndex].name}
           </h3>
-          <p className="text-sm">{projects[currentIndex].description}</p>
+          <p className="text-sm">{projectsToShow[currentIndex].description}</p>
           <div className="flex flex-row space-x-2 mb-4">
-            {projects[currentIndex].tech.map((tech, index) => (
+            {projectsToShow[currentIndex].tech.map((tech, index) => (
               <div key={index}>
                 <Image
                   src={getTechIconPath(tech)}
@@ -78,7 +94,7 @@ export default function ProjectCarousel() {
           </div>
           <div className="flex flex-row space-x-2">
             <a
-              href={projects[currentIndex].github}
+              href={projectsToShow[currentIndex].github}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -87,7 +103,7 @@ export default function ProjectCarousel() {
               </Button>
             </a>
             <a
-              href={projects[currentIndex].demo}
+              href={projectsToShow[currentIndex].demo}
               target="_blank"
               rel="noopener noreferrer"
             >
