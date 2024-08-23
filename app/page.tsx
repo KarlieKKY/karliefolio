@@ -1,6 +1,7 @@
 import HeroSection from "@/components/custom_ui/Header";
 import Projects from "./projects/_components/Projects";
 import AboutMe from "./about/_components/AboutMe";
+import ContactForm from "./contact/_components/ContactForm";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <Projects />
       <AboutMe />
+      <ContactForm />
     </main>
   );
 }

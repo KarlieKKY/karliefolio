@@ -39,7 +39,7 @@ export default function NavBar() {
                   About
                 </Link>
                 <Link
-                  href="/"
+                  href="/contact"
                   className="hover:bg-gray-700 text-white px-5 py-2 rounded-md text-sm font-medium"
                 >
                   Contact
