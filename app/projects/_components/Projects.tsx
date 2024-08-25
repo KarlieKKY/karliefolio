@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { projects } from "@/utils/project-data";
 import getTechIconPath from "@/utils/techIcon-mapper";
+import convertDate from "@/utils/date-converter";
 
 import ProjectCarousel from "./ProjectCarousel";
 import AllProjects from "./AllProjects";
@@ -44,7 +45,7 @@ export default function Projects({ showAll = false }: ProjectsProps) {
               </div>
               <div className="text-xs text-gray-500 mb-2">
                 <span className="uppercase">{project.category}</span>{" "}
-                &nbsp;|&nbsp; {project.date}
+                &nbsp;|&nbsp; {convertDate(project.date)}
               </div>
               <div className="mt-4">
                 <h3 className="text-lg font-semibold mb-2">{project.name}</h3>

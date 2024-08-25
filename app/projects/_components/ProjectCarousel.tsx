@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 import getTechIconPath from "@/utils/techIcon-mapper";
+import convertDate from "@/utils/date-converter";
 
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -72,7 +73,7 @@ export default function ProjectCarousel({
               <span className="text-red-500 uppercase">
                 {projectsToShow[currentIndex].category}
               </span>
-              &nbsp;|&nbsp; {projectsToShow[currentIndex].date}
+              &nbsp;|&nbsp; {convertDate(projectsToShow[currentIndex].date)}
             </div>
           </div>
           <h3 className="text-lg font-semibold">

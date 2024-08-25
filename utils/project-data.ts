@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     name: "Live Recorder",
     category: "Full-stack",
-    date: "last year",
+    date: "2024-07-18",
     description:
       "Streams and transcribes speech in real-time, offering seamless interaction with live text rendering for instant feedback.",
     tech: [
@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     name: "Sync-In",
     category: "full-stack",
-    date: "last year",
+    date: "2024-03-18",
     description:
       "A study tool imports PDFs, generates 10 questions by analyzing related content, and allows users to answer and receive instant marks.",
     tech: [
@@ -60,7 +60,7 @@ export const projects: Project[] = [
   {
     name: "Coverlit",
     category: "full-stack",
-    date: "last year",
+    date: "2023-09-18",
     description:
       "A CV generator crafts personalized cover letters by analyzing user details, company info, and job descriptions, streamlining job application processes.",
     tech: [
@@ -78,7 +78,7 @@ export const projects: Project[] = [
   {
     name: "Stray Whiskers",
     category: "full-stack",
-    date: "last year",
+    date: "2023-08-18",
     description:
       "A 2D game where users interact with stray cats, raising awareness about the challenges these animals face in real life.",
     tech: ["python", "pygame", "flask", "openai", "postgresql"],
@@ -89,7 +89,7 @@ export const projects: Project[] = [
   {
     name: "Board game forum",
     category: "frontend",
-    date: "last year",
+    date: "2023-06-18",
     description:
       "A responsive forum frontend lets users like, dislike, and comment, featuring conditional rendering and functionality similar to Reddit for dynamic interactions.",
     tech: ["js", "vite", "reactjs", "axios"],
@@ -100,7 +100,7 @@ export const projects: Project[] = [
   {
     name: "Board game forum",
     category: "BACKEND",
-    date: "last year",
+    date: "2023-06-18",
     description:
       "A forum backend allows users to like, dislike, comment, and more, providing functionality similar to Reddit for engaging discussions.",
     tech: [
