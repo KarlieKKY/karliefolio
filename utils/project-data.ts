@@ -53,12 +53,12 @@ export const projects: Project[] = [
       "llamaindex",
       "neo4j",
     ],
-    github: "https://github.com/KarlieKKY/nc-games.git",
-    demo: "https://nc-games-s0lm.onrender.com/api",
+    github: "https://github.com/KarlieKKY",
+    demo: "https://github.com/KarlieKKY",
     imageUrl: "/images/thumbnail-decorating.jpg",
   },
   {
-    name: "CV Generator",
+    name: "Coverlit",
     category: "full-stack",
     date: "last year",
     description:
@@ -71,8 +71,8 @@ export const projects: Project[] = [
       "llamaindex",
       "langchain",
     ],
-    github: "https://github.com/KarlieKKY/nc-games.git",
-    demo: "https://nc-games-s0lm.onrender.com/api",
+    github: "https://github.com/tmkwong/coverlit.git",
+    demo: "https://github.com/tmkwong/coverlit.git",
     imageUrl: "/images/thumbnail-decorating.jpg",
   },
   {
@@ -82,8 +82,8 @@ export const projects: Project[] = [
     description:
       "A 2D game where users interact with stray cats, raising awareness about the challenges these animals face in real life.",
     tech: ["python", "pygame", "flask", "openai", "postgresql"],
-    github: "https://github.com/KarlieKKY/nc-games.git",
-    demo: "https://nc-games-s0lm.onrender.com/api",
+    github: "https://gitfront.io/r/user-6459585/iJyMKCuL527u/Group4-CFG/",
+    demo: "https://www.youtube.com/watch?v=qnKXL-lkglQ",
     imageUrl: "/images/thumbnail-decorating.jpg",
   },
   {
@@ -93,8 +93,8 @@ export const projects: Project[] = [
     description:
       "A responsive forum frontend lets users like, dislike, and comment, featuring conditional rendering and functionality similar to Reddit for dynamic interactions.",
     tech: ["js", "vite", "reactjs", "axios"],
-    github: "https://github.com/KarlieKKY/nc-games.git",
-    demo: "https://nc-games-s0lm.onrender.com/api",
+    github: "https://github.com/KarlieKKY/fe-nc-games",
+    demo: "https://karlie-games.netlify.app/",
     imageUrl: "/images/thumbnail-decorating.jpg",
   },
   {
