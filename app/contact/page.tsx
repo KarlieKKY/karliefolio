@@ -2,7 +2,7 @@ import ContactForm from "./_components/ContactForm";
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-full">
       <ContactForm />
     </main>
   );

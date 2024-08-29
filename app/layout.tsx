@@ -4,6 +4,8 @@ import "./globals.css";
 import NavBar from "@/components/custom_ui/Navbar";
 import Footer from "@/components/custom_ui/Footer";
 
+import { Toaster } from "@/components/ui/toaster";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,6 +24,7 @@ export default function RootLayout({
         <NavBar />
         <div className="flex flex-col items-center">
           {children}
+          <Toaster />
           <Footer />
         </div>
       </body>
