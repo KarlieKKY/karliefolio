@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="bg-black">
+    <div className="relative bg-black">
       <Image
         src="/images/banner.JPG"
         alt="banner-img"
@@ -10,6 +10,13 @@ export default function HeroSection() {
         width={1080}
         height={487}
       />
+      <div className="absolute inset-0">
+        <div className="absolute bottom-10 left-10 z-10">
+          <h2 className="text-lg mb-2">Hello, I'm</h2>
+          <h1 className="text-3xl font-bold mb-4">Karlie Guan</h1>
+          <h2 className="text-xl">Software Developer</h2>
+        </div>
+      </div>
     </div>
   );
 }
