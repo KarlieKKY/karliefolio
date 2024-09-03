@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 import { projects } from "@/utils/project-data";
 import getTechIconPath from "@/utils/techIcon-mapper";
@@ -15,7 +17,12 @@ interface ProjectsProps {
 }
 
 export default function Projects({ showAll = false }: ProjectsProps) {
+  const router = useRouter();
   const projectsToShow = showAll ? projects : projects.slice(0, 3);
+
+  const handleViewPageClick = (projectId: string | number) => {
+    router.push(`/projects/${projectId}`);
+  };
 
   return (
     <section className="py-8 bg-orange-50 3xl:py-16">
@@ -33,8 +40,8 @@ export default function Projects({ showAll = false }: ProjectsProps) {
           </Link>
         </div>
         <div className="hidden md:grid gap-7 md:grid-cols-3">
-          {projectsToShow.map((project, index) => (
-            <div key={index} className="overflow-hidden">
+          {projectsToShow.map((project) => (
+            <div key={project.id} className="overflow-hidden">
               <div className="w-full h-48 relative">
                 <Image
                   src={project.imageUrl}
@@ -76,15 +83,19 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                       Github
                     </Button>
                   </a>
-                  <a
+                  {/* <a
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
+                  > */}
+                  <Button
+                    variant="outline"
+                    className="bg-transparent"
+                    onClick={() => handleViewPageClick(project.id)}
                   >
-                    <Button variant="outline" className="bg-transparent">
-                      Demo
-                    </Button>
-                  </a>
+                    View Page
+                  </Button>
+                  {/* </a> */}
                 </div>
               </div>
             </div>
