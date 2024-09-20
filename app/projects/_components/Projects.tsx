@@ -54,7 +54,7 @@ export default function Projects({ showAll = false }: ProjectsProps) {
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-gray-900 uppercase">
+            <h2 className="text-base md:text-3xl font-bold text-gray-900 uppercase">
               projects
             </h2>
           </motion.div>
@@ -66,7 +66,7 @@ export default function Projects({ showAll = false }: ProjectsProps) {
           >
             <Link
               href="/projects"
-              className="text-red-600 hover:text-red-800 flex flex-row space-x-1.5 items-center"
+              className="text-xs md:text-base text-red-600 hover:text-red-800 flex flex-row space-x-1.5 items-center"
             >
               <div className="uppercase">GO TO PROJECTS PAGE</div>
               <CornerDownRight className="w-4 h-4" />
@@ -80,8 +80,12 @@ export default function Projects({ showAll = false }: ProjectsProps) {
         >
           <div className="hidden md:grid gap-7 md:grid-cols-3">
             {projectsToShow.map((project, index) => (
-              <motion.div variants={projectVariants} custom={index}>
-                <div key={project.id} className="overflow-hidden">
+              <motion.div
+                variants={projectVariants}
+                custom={index}
+                key={project.id}
+              >
+                <div className="overflow-hidden">
                   <div className="w-full h-48 relative">
                     <Image
                       src={project.imageUrl}
