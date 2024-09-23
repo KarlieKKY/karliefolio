@@ -18,6 +18,12 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-sans)", "sans-serif"],
+        roboto: ["var(--font-roboto)", "sans-serif"],
+        condensed: ["var(--font-roboto-condensed)", "sans-serif"],
+      },
+
       screens: {
         "3xl": "1920px",
       },

@@ -13,7 +13,7 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <div className="absolute bottom-10 left-10 z-10">
           <h2 className="text-lg mb-2">Hello, I'm</h2>
-          <h1 className="text-3xl font-bold mb-4">Karlie Guan</h1>
+          <h1 className="font-roboto text-3xl font-black mb-4">Karlie Guan</h1>
           <h2 className="text-xl">Software Developer</h2>
         </div>
       </div>
