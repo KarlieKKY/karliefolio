@@ -17,7 +17,9 @@ export default function AllProjects() {
                 src={project.imageUrl}
                 alt={project.name}
                 className="object-cover"
-                layout="fill"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority={true}
+                fill
               />
             </div>
             <div className="text-xs text-gray-500 mb-2">
@@ -38,7 +40,11 @@ export default function AllProjects() {
                       alt={`${tech} Icon`}
                       width={23}
                       height={23}
-                      style={{ width: "auto", height: "23px" }}
+                      style={{
+                        width: "23px",
+                        height: "23px",
+                        objectFit: "contain",
+                      }}
                     />
                   </div>
                 ))}

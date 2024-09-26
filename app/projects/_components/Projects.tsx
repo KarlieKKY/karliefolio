@@ -91,7 +91,9 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                       src={project.imageUrl}
                       alt={project.name}
                       className="object-cover"
-                      layout="fill"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      priority={true}
+                      fill
                     />
                   </div>
                   <div className="text-xs text-gray-500 mb-2">
@@ -103,18 +105,19 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                       {project.name}
                     </h3>
                     <p className="text-gray-700 mb-4">{project.description}</p>
-                    <div className="flex flex-row space-x-2 mb-4">
+                    <div className="flex flex-row space-x-1 xl:space-x-2 mb-4">
                       {project.tech.map((tech: string, idx) => (
-                        <div
-                          key={idx}
-                          // className="text-sm text-gray-600 bg-gray-200 px-2 py-1 rounded"
-                        >
+                        <div key={idx}>
                           <Image
                             src={getTechIconPath(tech)}
                             alt={`${tech} Icon`}
                             width={23}
                             height={23}
-                            style={{ width: "auto", height: "23px" }}
+                            style={{
+                              width: "23px",
+                              height: "23px",
+                              objectFit: "contain",
+                            }}
                           />
                         </div>
                       ))}

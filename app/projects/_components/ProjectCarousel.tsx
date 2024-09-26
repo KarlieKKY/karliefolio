@@ -60,8 +60,9 @@ export default function ProjectCarousel({
               <Image
                 src={project.imageUrl}
                 alt={`Slide ${index + 1}`}
-                layout="fill"
                 className="block w-full object-cover"
+                fill
+                priority={true}
               />
             </div>
           ))}
@@ -88,7 +89,11 @@ export default function ProjectCarousel({
                   alt={`${tech} Icon`}
                   width={18}
                   height={18}
-                  style={{ width: "auto", height: "18px" }}
+                  style={{
+                    width: "18px",
+                    height: "18px",
+                    objectFit: "contain",
+                  }}
                 />
               </div>
             ))}

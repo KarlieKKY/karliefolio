@@ -9,6 +9,7 @@ export default function HeroSection() {
         className="block w-full object-cover"
         width={1080}
         height={487}
+        priority={true}
       />
       <div className="absolute inset-0">
         <div className="absolute bottom-10 left-10 z-10">

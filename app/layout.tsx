@@ -21,7 +21,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${roboto.variable} ${roboto_condensed.variable}`}
     >
-      <body className={`font-condensed bg-slate-900`}>
+      <body className={"font-condensed bg-slate-900"}>
         <NavBar />
         <div className="flex flex-col items-center">
           {children}
