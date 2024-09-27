@@ -79,7 +79,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-orange-50">
+    <section className="bg-orange-50 py-10">
       <div className="flex justify-center w-full">
         <Form {...form}>
           <form
