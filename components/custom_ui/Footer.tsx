@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import FooterMobileContent from "./FooterMobileContent";
-import FooterDesktopContent from "./FooterDesktopContent";
-import FooterBanner from "./FooterBanner";
+import FooterMobileContent from "./footer/FooterMobileContent";
+import FooterDesktopContent from "./footer/FooterDesktopContent";
+import FooterBanner from "./footer/FooterBanner";
 
 export default function Footer() {
   return (
