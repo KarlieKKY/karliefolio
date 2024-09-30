@@ -26,7 +26,7 @@ function InfiniteSlider({ children, baseVelocity = 5 }: ParallaxProps) {
   return (
     <div className="overflow-hidden whitespace-nowrap flex flex-nowrap tracking-tighter leading-[0.8]">
       <motion.div
-        className="flex whitespace-nowrap flex-nowrap font-bold uppercase opacity-10 text-[67px] sm:text-[114px] md:text-[140px] italic"
+        className="flex whitespace-nowrap flex-nowrap font-bold uppercase opacity-20 text-[67px] sm:text-[114px] md:text-[140px] italic"
         style={{ x }}
       >
         {[...Array(4)].map((_, index) => (
