@@ -10,8 +10,8 @@ export default function Home() {
       <HeroSection />
       <Projects />
       <AboutMe />
-      <ContactForm />
       <TechUsed />
+      <ContactForm />
     </main>
   );
 }
