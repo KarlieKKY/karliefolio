@@ -91,9 +91,9 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                       src={project.imageUrl}
                       alt={project.name}
                       className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      priority={true}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      // priority={true}
                     />
                   </div>
                   <div className="text-xs text-gray-500 mb-2">
@@ -105,7 +105,7 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                       {project.name}
                     </h3>
                     <p className="text-gray-700 mb-4">{project.description}</p>
-                    <div className="flex flex-row space-x-1 xl:space-x-2 mb-4">
+                    <div className="flex flex-wrap space-x-1 xl:space-x-2 mb-4">
                       {project.tech.map((tech: string, idx) => (
                         <div key={idx}>
                           <Image

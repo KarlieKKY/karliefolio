@@ -6,7 +6,7 @@ export const techIcons: TechIcons = {
   js: "/logos/js/js.svg",
   nodejs: "/logos/nodejs/nodejs.svg",
   express: "/logos/expressjs/expressjs-wordmark.svg",
-  nextjs: "/logos/nextjs/nextjs-horizontal.svg",
+  nextjs: "/logos/nextjs/nextjs.svg",
   ts: "/logos/ts/ts.svg",
   reactjs: "/logos/reactjs/reactjs.svg",
   tailwind: "/logos/tailwind/tailwind.svg",
@@ -32,4 +32,9 @@ export const techIcons: TechIcons = {
   webrtc: "/logos/webrtc/webrtc.svg",
   streamlit: "/logos/streamlit/streamlit.svg",
   weaviate: "/logos/weaviate/weaviate-nav-logo-light.svg",
+  aws: "/logos/aws/aws.svg",
+  css: "/logos/css/css.svg",
+  html: "/logos/html/html.svg",
+  mongodb: "/logos/mongodb/mongodb.svg",
+  javascript: "/logos/javascript/javascript.svg",
 };

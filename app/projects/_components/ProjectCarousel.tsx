@@ -81,7 +81,7 @@ export default function ProjectCarousel({
             {projectsToShow[currentIndex].name}
           </h3>
           <p className="text-sm">{projectsToShow[currentIndex].description}</p>
-          <div className="flex flex-row space-x-2 mb-4">
+          <div className="flex flex-wrap space-x-2 mb-4">
             {projectsToShow[currentIndex].tech.map((tech, index) => (
               <div key={index}>
                 <Image

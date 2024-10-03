@@ -2,18 +2,7 @@ import getTechIconPath from "@/utils/techIcon-mapper";
 import Image from "next/image";
 
 type SkillsList = {
-  nextjs: string;
-  ts: string;
-  javascript: string;
-  python: string;
-  reactjs: string;
-  nodejs: string;
-  html: string;
-  css: string;
-  aws: string;
-  postgresql: string;
-  mongodb: string;
-  tailwind: string;
+  [key: string]: string;
 };
 
 const skillsList: SkillsList = {
@@ -33,33 +22,35 @@ const skillsList: SkillsList = {
 
 export default function AboutMe() {
   return (
-    <div className="bg-[#0f0f0f] text-white h-[600px] py-20">
-      <div className="px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#0f0f0f] text-white h-full py-20">
+      <div className="px-4 sm:px-6 lg:px-12 3xl:px-48">
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
           <div>
             <h2 className="uppercase">My skills</h2>
-            <div className="space-y-2">
-              {Object.keys(skillsList).map((skill, idx) => {
+            <div className="flex flex-wrap gap-3 font-roboto">
+              {Object.entries(skillsList).map(([skill, name], idx) => {
                 return (
                   <div
-                    className="flex flex-row items-center space-x-2"
+                    className="flex flex-row items-center space-x-1.5 bg-gray-900 px-2 py-2 rounded-md transition-all duration-300 hover:bg-gray-700 hover:shadow-[0_0_10px_3px_rgba(59,130,246,0.5)] cursor-pointer"
                     key={idx}
                   >
                     <Image
                       src={getTechIconPath(skill)}
                       alt={`${skill} logo`}
-                      width={30}
-                      height={30}
-                    />{" "}
-                    <p>{skill}</p>
+                      width={20}
+                      height={20}
+                      style={{
+                        width: "20px",
+                        height: "20px",
+                        objectFit: "contain",
+                      }}
+                    />
+
+                    <p>{name}</p>
                   </div>
                 );
               })}
             </div>
-            <p>
-              Next.js, TypeScript, JavasScript, Python React, Node.js, HTML,
-              CSS, AWS, PostgreSQL, MongoDB, TailwindCSS
-            </p>
           </div>
           <div>Image</div>
         </div>
