@@ -6,7 +6,7 @@ import TechUsed from "@/components/custom_ui/TechUsed";
 
 export default function Home() {
   return (
-    <main className="w-full max-w-[1920px]">
+    <main className="w-full max-w-[1920px] ">
       <HeroSection />
       <Projects />
       <AboutMe />

@@ -28,7 +28,9 @@ export default function AllProjects() {
             </div>
             <div className="mt-4">
               <h3 className="text-lg font-semibold mb-2">{project.name}</h3>
-              <p className="text-gray-700 mb-4">{project.description}</p>
+              <p className="font-roboto text-gray-700 mb-4">
+                {project.description}
+              </p>
               <div className="flex flex-row space-x-2 mb-4">
                 {project.tech.map((tech: string, idx) => (
                   <div

@@ -104,7 +104,9 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                     <h3 className="text-lg font-semibold mb-2">
                       {project.name}
                     </h3>
-                    <p className="text-gray-700 mb-4">{project.description}</p>
+                    <p className="text-gray-700 mb-4 font-roboto">
+                      {project.description}
+                    </p>
                     <div className="flex flex-wrap space-x-1 xl:space-x-2 mb-4">
                       {project.tech.map((tech: string, idx) => (
                         <div key={idx}>
@@ -128,7 +130,10 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Button variant="outline" className="bg-transparent">
+                        <Button
+                          variant="outline"
+                          className="font-roboto bg-transparent"
+                        >
                           Github
                         </Button>
                       </a>
@@ -139,7 +144,7 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                   > */}
                       <Button
                         variant="outline"
-                        className="bg-transparent"
+                        className="font-roboto bg-transparent"
                         onClick={() => handleViewPageClick(project.id)}
                       >
                         View Page

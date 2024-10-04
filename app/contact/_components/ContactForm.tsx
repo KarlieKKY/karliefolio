@@ -79,7 +79,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-orange-50 py-10">
+    <section className="py-10">
       <div className="flex justify-center w-full">
         <Form {...form}>
           <form
@@ -140,7 +140,7 @@ export default function ContactForm() {
             />
             <Button
               type="submit"
-              className="text-md text-white hover:bg-secondary"
+              className="font-roboto text-md text-white hover:bg-secondary"
             >
               Send{" "}
             </Button>
