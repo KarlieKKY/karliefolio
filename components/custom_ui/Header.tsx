@@ -1,10 +1,12 @@
 import Image from "next/image";
 
+import bannerImage from "@/assets/images/banner.JPG";
+
 export default function HeroSection() {
   return (
-    <div className="relative bg-black">
+    <div className="relative ">
       <Image
-        src="/images/banner.JPG"
+        src={bannerImage}
         alt="banner-img"
         className="block w-full object-cover"
         width={1080}

@@ -10,8 +10,8 @@ export default function NavBar() {
 
   return (
     <div>
-      <div className="hidden md:block relative top-3">
-        <div className="flex items-center justify-between bg-[#0b0b0b]/60 backdrop-blur py-2.5 px-6 border-white/15 rounded-full mx-[17vw]">
+      <div className="hidden md:block fixed top-3 w-full z-50">
+        <div className="flex items-center justify-between bg-[#0b0b0b]/60 backdrop-blur py-2.5 px-6 border-black/15 rounded-full mx-[17vw]">
           <div className="flex gap-4">
             <PawPrint className="h-5 w-5" />
             <h1 className="font-roboto-condensed text-sm">Karliefolio</h1>
