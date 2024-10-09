@@ -10,18 +10,19 @@ const config = {
   ],
   prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
+    // container: {
+    //   center: true,
+    //   padding: "2rem",
+    //   screens: {
+    //     "2xl": "1400px",
+    //   },
+    // },
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", "sans-serif"],
         roboto: ["var(--font-roboto)", "sans-serif"],
         condensed: ["var(--font-roboto-condensed)", "sans-serif"],
+        kanit: ["var(--font-kanit)", "sans-serif"],
       },
 
       screens: {

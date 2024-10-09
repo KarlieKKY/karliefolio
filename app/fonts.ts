@@ -1,4 +1,4 @@
-import { Inter, Roboto, Roboto_Condensed } from "next/font/google";
+import { Inter, Kanit, Roboto, Roboto_Condensed } from "next/font/google";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -17,6 +17,13 @@ export const roboto = Roboto({
 export const roboto_condensed = Roboto_Condensed({
   subsets: ["latin"],
   variable: "--font-roboto-condensed",
+  display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+export const kanit = Kanit({
+  subsets: ["latin"],
+  variable: "--font-kanit",
   display: "swap",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, PawPrint, Music } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -9,13 +9,34 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className=" text-white bg-stone-950">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+    <div>
+      <div className="hidden md:block relative top-3">
+        <div className="flex items-center justify-between bg-[#0b0b0b]/60 backdrop-blur py-2.5 px-6 border-white/15 rounded-full mx-[17vw]">
+          <div className="flex gap-4">
+            <PawPrint className="h-5 w-5" />
+            <h1 className="font-roboto-condensed text-sm">Karliefolio</h1>
+          </div>
+          <nav className="flex gap-4">
+            <Link href="#">Home</Link>
+
+            <Link href="/projects">Works</Link>
+
+            <Link href="/">Resume</Link>
+
+            <Link href="/contact">Contact</Link>
+
+            <Link href="/about">About</Link>
+          </nav>
+          <Music className="h-5 w-5" />
+        </div>
+      </div>
+      {/* <div className="mx-auto px-4 sm:px-6 lg:px-8 font-medium">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div>
               <div className="flex-shrink-0">
                 <div className="h-8 w-8">Logo</div>
+                <h1>Karliefolio</h1>
               </div>
             </div>
             <div className="hidden md:block">
@@ -61,7 +82,7 @@ export default function NavBar() {
             </Button>
           </div>
         </div>
-      </div>
+      </div> */}
       <motion.div
         initial={{ x: "100%" }}
         animate={{ x: isOpen ? 0 : "100%" }}
@@ -111,6 +132,6 @@ export default function NavBar() {
           </Link>
         </div>
       </motion.div>
-    </nav>
+    </div>
   );
 }
