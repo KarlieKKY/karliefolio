@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
-  .nav-item {
-    @apply rounded-full;
+@layer components {
+  .bg-custom-gradient {
+    opacity: 80%;
+    background-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #151515 9%,
+      #151515 91%,
+      transparent 100%
+    );
   }
-} */
+}

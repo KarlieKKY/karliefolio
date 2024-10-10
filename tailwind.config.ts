@@ -10,10 +10,10 @@ const config = {
   ],
   prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "1.3rem",
-    },
+    // container: {
+    //   center: true,
+    //   padding: "1.3rem",
+    // },
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", "sans-serif"],
