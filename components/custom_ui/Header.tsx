@@ -5,7 +5,7 @@ import bannerImage from "@/assets/images/banner.JPG";
 export default function HeroSection() {
   return (
     <div className="relative px-5 pt-3.5">
-      <div className="">
+      <div>
         <Image
           src={bannerImage}
           alt="banner-img"

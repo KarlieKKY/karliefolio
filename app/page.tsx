@@ -10,7 +10,7 @@ export default function Home() {
     <div className="">
       <NavBar />
       <HeroSection />
-      {/* <Projects /> */}
+      <Projects />
       {/* <AboutMe /> */}
       {/* <TechUsed /> */}
       {/* <ContactForm /> */}
