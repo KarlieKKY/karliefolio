@@ -52,7 +52,7 @@ export default function Projects({ showAll = false }: ProjectsProps) {
   };
 
   return (
-    <section className="px-5">
+    <section className="">
       <div className="">
         <div className="hidden md:block pt-20">
           <div className="flex flex-col items-center">
