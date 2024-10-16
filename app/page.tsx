@@ -17,7 +17,7 @@ export default function Home() {
       <SiteInfo />
       {/* <AboutMe /> */}
       {/* <TechUsed /> */}
-      {/* <ContactForm /> */}
+      <ContactForm />
     </div>
   );
 }
