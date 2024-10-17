@@ -79,74 +79,82 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-10">
-      <div className="flex justify-center w-full">
-        <Form {...form}>
-          <form
-            ref={formRef}
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="w-2/3 space-y-6"
-          >
-            <FormField
-              name="username"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-lg">Name</FormLabel>
-                  <FormControl>
-                    <Input
-                      className="border-primary bg-white"
-                      placeholder="Your Name"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-xs text-red-600" />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-lg">Email</FormLabel>
-                  <FormControl>
-                    <Input
-                      className="border-primary bg-white"
-                      placeholder="Email Address"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-xs text-red-600" />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="message"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-lg">Message</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      className="border-primary bg-white"
-                      placeholder="Type your message here."
-                      id="message"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-xs text-red-600" />
-                </FormItem>
-              )}
-            />
-            <Button
-              type="submit"
-              className="font-roboto text-md text-white hover:bg-secondary"
+    <div className="my-14 rounded-[1.5rem] p-5 bg-[#424242]">
+      <div className="w-full h-full rounded-[0.75rem] bg-[#1d1d1d] ">
+        <div className="grid grid-rows2 md:grid-cols-2  place-items-center py-12">
+          <Form {...form}>
+            <form
+              ref={formRef}
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="w-3/4 space-y-4"
             >
-              Send{" "}
-            </Button>
-          </form>
-        </Form>
+              <FormField
+                name="username"
+                render={({ field }) => (
+                  <FormItem className="space-y-4 w-3/4">
+                    <FormLabel className="text-xl">Name:</FormLabel>
+                    <FormControl>
+                      <Input
+                        className="bg-[#303030] border-[#9DFF85]"
+                        placeholder="Your Name"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage className="text-xs text-red-600" />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem className="space-y-4 w-3/4">
+                    <FormLabel className="text-xl">Email:</FormLabel>
+                    <FormControl>
+                      <Input
+                        className="bg-[#303030] border-[#7ACCFF]"
+                        placeholder="Email Address"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage className="text-xs text-red-600" />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem className="space-y-4">
+                    <FormLabel className="text-xl">Message:</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        className="bg-[#303030] border-[#FFF587] h-60"
+                        placeholder="Type your message here."
+                        id="message"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage className="text-xs text-red-600" />
+                  </FormItem>
+                )}
+              />
+              <Button
+                type="submit"
+                className="font-semibold"
+                variant="destructive"
+              >
+                Send
+              </Button>
+            </form>
+          </Form>
+          <div className="">
+            <h1 className="uppercase font-kanit font-bold text-6xl">
+              Contact Me
+            </h1>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }

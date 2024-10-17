@@ -28,11 +28,11 @@ export default function SiteTechStack() {
           className="bg-gradient-to-r from-[#E73FC8] to-[#A43DF9] p-10"
           italic={false}
         >
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-5">
             {SiteTechUsed.map((tech, index) => {
               //   const IconComponent = Icons[tech as keyof typeof Icons];
               return (
-                <div key={index} className="flex items-center gap-6">
+                <div key={index} className="flex items-center gap-5">
                   {/* {IconComponent && <IconComponent width={40} height={40} />} */}
                   <Heart fill="white" />
                   <span className="uppercase font-condensed font-medium">
@@ -51,11 +51,11 @@ export default function SiteTechStack() {
           className="bg-gradient-to-r from-[#A43DF9] to-[#553EFE] p-10"
           italic={false}
         >
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-5">
             {SiteTechUsed.map((tech, index) => {
               // const IconComponent = Icons[tech as keyof typeof Icons];
               return (
-                <div key={index} className="flex items-center gap-6">
+                <div key={index} className="flex items-center gap-5">
                   <Heart fill="white" />
                   {/* {IconComponent && <IconComponent width={40} height={40} />} */}
                   <span className="uppercase font-condensed font-medium">

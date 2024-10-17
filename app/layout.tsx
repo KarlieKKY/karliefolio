@@ -32,8 +32,8 @@ export default function RootLayout({
         {/* <div className="flex flex-col items-center"> */}
         {/* <div className=""> */}
         {children}
-        {/* <Toaster />
-          <Footer /> */}
+        <Toaster />
+        {/* <Footer /> */}
         {/* </div> */}
       </body>
     </html>
