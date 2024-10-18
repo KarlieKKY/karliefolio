@@ -8,6 +8,10 @@ import TailwindcssIcon from "./icons/tailwind.svg";
 import ShadcnIcon from "./icons/shadcn-logo.svg";
 import TsIcon from "./icons/ts.svg";
 
+import GithubIcon from "./icons/github-icon.svg";
+import LinkedinIcon from "./icons/linkedin-icon.svg";
+import MediumIcon from "./icons/medium-icon.svg";
+
 export type IconType = React.FC<SVGProps<SVGSVGElement>>;
 
 export const Icons = {
@@ -18,6 +22,9 @@ export const Icons = {
   tailwindcss: TailwindcssIcon as IconType,
   shadcn: ShadcnIcon as IconType,
   typescript: TsIcon as IconType,
+  github: GithubIcon as IconType,
+  linkedin: LinkedinIcon as IconType,
+  medium: MediumIcon as IconType,
 };
 
 export {
@@ -28,6 +35,9 @@ export {
   TailwindcssIcon,
   ShadcnIcon,
   TsIcon,
+  GithubIcon,
+  LinkedinIcon,
+  MediumIcon,
 };
 
 export default Icons;
