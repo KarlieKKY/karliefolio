@@ -3,7 +3,7 @@ import { inter, kanit, roboto, roboto_condensed } from "./fonts";
 import { twMerge } from "tailwind-merge";
 import "./globals.css";
 import NavBar from "@/components/sections/Navbar";
-import Footer from "@/components/custom_ui/Footer";
+import Footer from "@/components/sections/Footer";
 
 import { Toaster } from "@/components/ui/toaster";
 

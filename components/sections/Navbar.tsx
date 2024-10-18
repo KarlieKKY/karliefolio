@@ -83,7 +83,7 @@ export default function NavBar() {
           </div>
         </div>
       </div> */}
-      <motion.div
+      {/* <motion.div
         initial={{ x: "100%" }}
         animate={{ x: isOpen ? 0 : "100%" }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -131,7 +131,7 @@ export default function NavBar() {
             Contact
           </Link>
         </div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }

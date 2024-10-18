@@ -1,8 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
-import FooterMobileContent from "./footer/FooterMobileContent";
-import FooterDesktopContent from "./footer/FooterDesktopContent";
-import FooterBanner from "./footer/FooterBanner";
+import FooterMobileContent from "../custom_ui/footer/FooterMobileContent";
+import FooterDesktopContent from "../custom_ui/footer/FooterDesktopContent";
+import FooterBanner from "../custom_ui/footer/FooterBanner";
+import FooterContent from "@/components/custom_ui/footer/FooterContent";
 
 export default function Footer() {
   return (
@@ -17,8 +18,9 @@ export default function Footer() {
         <div className="h-[500px] sticky top-[calc(100vh-500px)]">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-10">
             <div className="flex flex-col justify-between items-center py-6 text-white">
-              <FooterMobileContent />
-              <FooterDesktopContent />
+              {/* <FooterMobileContent /> */}
+              {/* <FooterDesktopContent /> */}
+              <FooterContent />
               <FooterBanner />
             </div>
           </div>
