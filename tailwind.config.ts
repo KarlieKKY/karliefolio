@@ -20,6 +20,7 @@ const config = {
         roboto: ["var(--font-roboto)", "sans-serif"],
         condensed: ["var(--font-roboto-condensed)", "sans-serif"],
         kanit: ["var(--font-kanit)", "sans-serif"],
+        flex: ["var(--font-flex)", "sans-serif"],
       },
 
       screens: {

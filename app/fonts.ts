@@ -1,4 +1,10 @@
-import { Inter, Kanit, Roboto, Roboto_Condensed } from "next/font/google";
+import {
+  Inter,
+  Kanit,
+  Roboto,
+  Roboto_Condensed,
+  Roboto_Flex,
+} from "next/font/google";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -26,4 +32,11 @@ export const kanit = Kanit({
   variable: "--font-kanit",
   display: "swap",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+export const flex = Roboto_Flex({
+  subsets: ["latin"],
+  variable: "--font-flex",
+  display: "swap",
+  weight: "700",
 });

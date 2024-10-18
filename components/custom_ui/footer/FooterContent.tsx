@@ -1,21 +1,27 @@
 export default function FooterDesktopContent() {
   return (
-    <footer>
-      <ul>
-        <li>logo</li>
-        <li>logo</li>
-        <li>logo</li>
+    <footer className="uppercase text-center font-flex">
+      <div className="">
+        <nav aria-label="Social media links">
+          <ul className="flex gap-2 justify-center">
+            <li>logo</li>
+            <li>logo</li>
+            <li>logo</li>
+          </ul>
+        </nav>
+      </div>
+      <div className="">
         <p>motion demo</p>
         <p>download cv</p>
-      </ul>
-      <ul>
-        <li>
-          <p>Home</p>
-          <p>all works</p>
-          <p>about me</p>
-          <p>contact</p>
-        </li>
-      </ul>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul className="flex gap-3">
+          <li>Home</li>
+          <li>all works</li>
+          <li>about me</li>
+          <li>contact</li>
+        </ul>
+      </nav>
     </footer>
   );
 }

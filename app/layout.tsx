@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { inter, kanit, roboto, roboto_condensed } from "./fonts";
+import { inter, kanit, roboto, roboto_condensed, flex } from "./fonts";
 import { twMerge } from "tailwind-merge";
 import "./globals.css";
 import NavBar from "@/components/sections/Navbar";
@@ -25,6 +25,7 @@ export default function RootLayout({
           roboto.variable,
           roboto_condensed.variable,
           kanit.variable,
+          flex.variable,
           "bg-[#1b1b1b] text-white antialiased font-roboto"
         )}
       >
