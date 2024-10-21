@@ -15,14 +15,16 @@ export default function HeroSection() {
             objectFit: "cover",
           }}
         />
-        <div className="absolute bottom-8 left-14 flex flex-col items-start gap-1.5">
-          <div className="bg-custom-gradient inline-block py-1 px-10">
-            <h1 className="font-kanit text-[2.5rem] font-extrabold">
+        <div className="text-xs absolute bottom-2 md:bottom-5 lg:bottom-8 left-1 md:left-8 lg:left-14 flex flex-col items-start gap-1 md:gap-1.5">
+          <div className="bg-custom-gradient inline-block py-1 lg:py-7 px-5 md:px-10">
+            <h1 className="font-kanit md:text-base lg:text-[2.5rem] font-extrabold">
               Karlie Guan
             </h1>
           </div>
-          <div className="bg-custom-gradient inline-block py-3.5 px-11">
-            <h2 className="text-3xl font-bold">Software Developer</h2>
+          <div className="bg-custom-gradient inline-block py-1.5 lg:py-3.5 px-6 md:px-11">
+            <h2 className="md:text-base lg:text-3xl font-bold">
+              Software Engineer
+            </h2>
           </div>
         </div>
       </div>
