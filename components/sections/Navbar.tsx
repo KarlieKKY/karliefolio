@@ -29,12 +29,12 @@ export default function NavBar() {
         transition={{ duration: "0.2" }}
         className="fixed top-0 pt-5 w-full z-50"
       >
-        <div className="text-sm lg:text-lg flex items-center justify-between bg-[#0b0b0b]/60 backdrop-blur py-2 lg:py-3 px-5 border-black/15 rounded-full mx-[17vw]">
+        <div className="text-sm lg:text-lg flex items-center justify-between bg-[#0b0b0b]/60 backdrop-blur py-2 lg:py-3 px-5 border-black/15 rounded-full mx-[17vw] border-2 border-pink-300/60">
           <div className="flex gap-3">
             <PawPrint className="h-5 w-5 lg:h-6 lg:w-6" />
             <h1 className="font-roboto-condensed">Karliefolio</h1>
           </div>
-          <nav className="flex gap-x-5">
+          <nav className="hidden md:flex gap-x-5">
             <Link href="#">Home</Link>
 
             <Link href="/projects">Works</Link>
@@ -45,8 +45,28 @@ export default function NavBar() {
 
             <Link href="/about">About</Link>
           </nav>
-          <Music className="h-5 w-5 lg:h-6 lg:w-6" />
+          <div className="hidden md:block">
+            <Music className="h-5 w-5 lg:h-6 lg:w-6" />
+          </div>
+          <Button
+            variant="ghost"
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden"
+          >
+            <Menu className="h-4 w-4" />
+          </Button>
         </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: "100%" }}
+        animate={{
+          opacity: isOpen ? 1 : 0,
+          x: isOpen ? 0 : "100%",
+        }}
+        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        className="fixed inset-0 bg-[#0b0b0b]/95 backdrop-blur-sm z-50 md:hidden"
+      >
+        <p>hey</p>
       </motion.div>
       {/* <div className="mx-auto px-4 sm:px-6 lg:px-8 font-medium">
         <div className="flex items-center justify-between h-16">
