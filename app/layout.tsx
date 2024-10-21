@@ -29,13 +29,9 @@ export default function RootLayout({
           "bg-[#1b1b1b] text-white antialiased font-roboto"
         )}
       >
-        {/* <NavBar /> */}
-        {/* <div className="flex flex-col items-center"> */}
-        {/* <div className=""> */}
+        <NavBar />
         {children}
         <Toaster />
-        {/* <Footer /> */}
-        {/* </div> */}
       </body>
     </html>
   );

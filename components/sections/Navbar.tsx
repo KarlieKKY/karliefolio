@@ -1,16 +1,34 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Menu, X, PawPrint, Music } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [navIsHidden, setNavIsHidden] = useState(false);
+  const { scrollY } = useScroll();
+  const lastYRef = useRef(0);
+
+  useMotionValueEvent(scrollY, "change", (y) => {
+    const difference = y - lastYRef.current;
+    if (Math.abs(difference) > 50) {
+      setNavIsHidden(difference > 0);
+      lastYRef.current = y;
+    }
+  });
 
   return (
     <div>
-      <div className="hidden md:block fixed top-5 w-full z-50">
+      <motion.div
+        animate={navIsHidden ? "navHidden" : "navVisible"}
+        whileHover="navVisible"
+        onFocusCapture={() => setNavIsHidden(false)}
+        variants={{ navHidden: { y: "-90%" }, navVisible: { y: "0%" } }}
+        transition={{ duration: "0.2" }}
+        className="fixed top-0 pt-5 w-full z-50"
+      >
         <div className="text-sm lg:text-lg flex items-center justify-between bg-[#0b0b0b]/60 backdrop-blur py-2 lg:py-3 px-5 border-black/15 rounded-full mx-[17vw]">
           <div className="flex gap-3">
             <PawPrint className="h-5 w-5 lg:h-6 lg:w-6" />
@@ -29,7 +47,7 @@ export default function NavBar() {
           </nav>
           <Music className="h-5 w-5 lg:h-6 lg:w-6" />
         </div>
-      </div>
+      </motion.div>
       {/* <div className="mx-auto px-4 sm:px-6 lg:px-8 font-medium">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">

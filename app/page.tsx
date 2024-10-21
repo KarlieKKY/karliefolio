@@ -11,7 +11,7 @@ import Footer from "@/components/sections/Footer";
 export default function Home() {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="px-1 md:px-3 lg:px-5">
         <HeroSection />
         <Projects />
