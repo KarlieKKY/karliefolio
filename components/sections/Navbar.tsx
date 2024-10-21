@@ -11,9 +11,9 @@ export default function NavBar() {
   return (
     <div>
       <div className="hidden md:block fixed top-5 w-full z-50">
-        <div className="text-sm flex items-center justify-between bg-[#0b0b0b]/60 backdrop-blur py-2 px-5 border-black/15 rounded-full mx-[17vw]">
+        <div className="text-sm lg:text-lg flex items-center justify-between bg-[#0b0b0b]/60 backdrop-blur py-2 lg:py-3 px-5 border-black/15 rounded-full mx-[17vw]">
           <div className="flex gap-3">
-            <PawPrint className="h-5 w-5" />
+            <PawPrint className="h-5 w-5 lg:h-6 lg:w-6" />
             <h1 className="font-roboto-condensed">Karliefolio</h1>
           </div>
           <nav className="flex gap-x-5">
@@ -27,7 +27,7 @@ export default function NavBar() {
 
             <Link href="/about">About</Link>
           </nav>
-          <Music className="h-5 w-5" />
+          <Music className="h-5 w-5 lg:h-6 lg:w-6" />
         </div>
       </div>
       {/* <div className="mx-auto px-4 sm:px-6 lg:px-8 font-medium">
