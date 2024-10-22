@@ -56,14 +56,14 @@ export default function Projects({ showAll = false }: ProjectsProps) {
       <div className="">
         <div className="hidden md:block pt-20">
           <div className="flex flex-col items-center">
-            <p className="text-6xl">🐻‍❄️</p>
-            <h1 className="font-kanit text-6xl font-bold uppercase pt-12 pb-5 tracking-wider">
+            <p className="text-3xl md:text-5xl lg:text-6xl">🐻‍❄️</p>
+            <h1 className="font-kanit text-3xl md:text-5xl lg:text-6xl font-bold uppercase pt-12 pb-5 tracking-wider">
               my works
             </h1>
             <Button
               variant="outline"
               size="lg"
-              className=" border-[#757575] text-2xl font-semibold px-14 py-6 bg-transparent"
+              className=" border-[#757575] text-lg md:text-xl lg:text-2xl font-semibold px-14 py-6 bg-transparent"
             >
               <Link href="projects ">Click here to view all my works!</Link>
             </Button>
@@ -74,11 +74,16 @@ export default function Projects({ showAll = false }: ProjectsProps) {
               const isEven = index % 2 === 0;
               const indexColor = getColorFn(index);
               return (
-                <article key={index} className="grid grid-cols-3 gap-6">
+                <article
+                  key={index}
+                  className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6"
+                >
                   <div
                     className={clsx(
-                      "col-span-1 aspect-square relative overflow-hidden rounded-3xl",
-                      isEven ? "order-1" : "order-2"
+                      "aspect-[1/0.5] lg:aspect-square relative overflow-hidden rounded-3xl",
+                      "lg:col-span-1",
+                      "order-1 lg:order-none",
+                      isEven ? "lg:order-1" : "lg:order-2"
                     )}
                   >
                     <Image
@@ -93,22 +98,24 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                   </div>
                   <div
                     className={clsx(
-                      "col-span-2 bg-[#303030] rounded-3xl flex flex-col justify-between px-12 pt-8 pb-10",
-                      isEven ? "order-2" : "order-1",
+                      "bg-[#303030] rounded-3xl flex flex-col justify-between px-12 pt-8 pb-10 space-y-2",
+                      "lg:col-span-2",
+                      "order-2 lg:order-none",
+                      isEven ? "lg:order-2" : "lg:order-1",
                       "card-particle-gradient"
                     )}
                   >
                     <p
-                      className="text-5xl font-condensed font-bold uppercase"
+                      className="text-3xl md:text-4xl lg:text-5xl font-condensed font-bold uppercase"
                       style={{ color: indexColor }}
                     >
                       {project.name}
                     </p>
-                    <p className="text-2xl font-bold text-[#A8A6A7] leading-tight">
+                    <p className="text-lg md:text-xl lg:text-2xl font-bold text-[#A8A6A7] leading-tight">
                       {project.description}
                     </p>
-                    <div className="flex flex-col gap-9">
-                      <div className="flex flex-wrap gap-5">
+                    <div className="flex flex-col gap-7 lg:gap-9">
+                      <div className="flex flex-wrap gap-3 lg:gap-5">
                         {project.tech.map((tech, idx) => {
                           return (
                             <div key={idx} title={tech}>
@@ -127,7 +134,7 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                           );
                         })}
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-1 lg:gap-2">
                         <Button
                           size="sm"
                           variant="ghost"

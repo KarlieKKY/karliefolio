@@ -79,14 +79,14 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="my-14 rounded-[1.5rem] p-5 bg-[#424242]">
-      <div className="w-full h-full rounded-[0.75rem] bg-[#1d1d1d] ">
-        <div className="grid grid-rows2 md:grid-cols-2  place-items-center py-12 card-particle-gradient">
+    <div className="my-14 rounded-2xl md:rounded-[1.5rem] p-2 md:p-4 lg:p-5 bg-[#424242]">
+      <div className="w-full h-full rounded-xl md:rounded-[0.75rem] bg-[#1d1d1d] ">
+        <div className="grid grid-cols-1 md:grid-cols-2 place-items-center py-12 card-particle-gradient">
           <Form {...form}>
             <form
               ref={formRef}
               onSubmit={form.handleSubmit(onSubmit)}
-              className="w-3/4 space-y-4"
+              className="w-3/4 space-y-4 md:order-1 order-2"
             >
               <FormField
                 name="username"
@@ -148,8 +148,8 @@ export default function ContactForm() {
               </Button>
             </form>
           </Form>
-          <div className="">
-            <h1 className="uppercase font-kanit font-bold text-6xl">
+          <div className="md:order-2 order-1">
+            <h1 className="uppercase font-kanit font-bold text-3xl md:text-5xl lg:text-6xl">
               Contact Me
             </h1>
           </div>

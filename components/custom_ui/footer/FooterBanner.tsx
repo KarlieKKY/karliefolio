@@ -14,7 +14,7 @@ export default function FooterBanner() {
           software engineer
         </InfiniteSlider>
       </div>
-      <div className="relative z-10 text-black w-full h-1/3 sm:h-[45%] md:h-3/4 flex flex-col items-center justify-center">
+      <div className="relative z-10 text-black w-full h-2/5 sm:h-[45%] md:h-3/4 flex flex-col items-center justify-center">
         <h2
           className="uppercase opacity-80 font-black tracking-tighter"
           style={{ fontSize: "clamp(2rem, 16.5vw, 20rem)" }}

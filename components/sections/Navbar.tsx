@@ -48,11 +48,7 @@ export default function NavBar() {
           <div className="hidden md:block">
             <Music className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
           </div>
-          <button
-            // variant="ghost"
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden"
-          >
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
             <Menu className="h-4 w-4" />
           </button>
         </div>

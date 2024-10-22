@@ -41,7 +41,7 @@ export default function ProjectCarousel({
   };
 
   return (
-    <div>
+    <div className="mt-4 px-1">
       <div
         id="default-carousel"
         className="relative w-full"
@@ -60,7 +60,7 @@ export default function ProjectCarousel({
               <Image
                 src={project.imageUrl}
                 alt={`Slide ${index + 1}`}
-                className="block w-full object-cover"
+                className="block w-full object-cover rounded-3xl"
                 fill
                 priority={true}
               />

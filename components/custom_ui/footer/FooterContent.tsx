@@ -12,11 +12,11 @@ const socialMediaLinks = [
 
 export default function FooterDesktopContent() {
   return (
-    <footer className="uppercase text-center font-flex mt-6 mb-14 ">
-      <div className="space-y-4">
+    <footer className="uppercase text-center font-flex mt-6 mb-10 md:mb-14">
+      <div className="space-y-3 md:space-y-4">
         <div className="">
           <nav aria-label="Social media links">
-            <ul className="flex gap-7 justify-center ">
+            <ul className="flex gap-5 md:gap-7 justify-center">
               {socialMediaLinks.map(({ name, url }, idx) => {
                 const IconComponent = Icons[name as keyof typeof Icons];
                 return (
@@ -26,7 +26,10 @@ export default function FooterDesktopContent() {
                       aria-label={`Visit ${name} page`}
                       target="_blank"
                     >
-                      <IconComponent className="w-10 h-10" fill="white" />
+                      <IconComponent
+                        className="w-8 h-8 md:w-10 md:h-10"
+                        fill="white"
+                      />
                     </a>
                   </li>
                 );
@@ -34,14 +37,14 @@ export default function FooterDesktopContent() {
             </ul>
           </nav>
         </div>
-        <div className="space-y-3">
+        <div className="space-y-2 md:space-y-3">
           <p className="underline">motion demo</p>
           <p>download cv</p>
         </div>
         <nav aria-label="Footer navigation">
-          <ul className="flex flex-col md:flex-row gap-5 ">
+          <ul className="flex flex-col md:flex-row gap-4 md:gap-5">
             <li>
-              <Link href="#">Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li>
               <Link href="/projects">all works</Link>

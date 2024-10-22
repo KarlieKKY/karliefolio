@@ -24,7 +24,7 @@ export default function SiteTechStack() {
           baseVelocity={5}
           fontSize="clamp(2rem, 8vw, 3.75rem)"
           opacity={1}
-          repetitions={5}
+          repetitions={6}
           className="bg-gradient-to-r from-[#E73FC8] to-[#A43DF9] p-10"
           italic={false}
         >
@@ -47,7 +47,7 @@ export default function SiteTechStack() {
           fontSize="clamp(2rem, 8vw, 3.75rem)"
           baseVelocity={-5}
           opacity={1}
-          repetitions={5}
+          repetitions={6}
           className="bg-gradient-to-r from-[#A43DF9] to-[#553EFE] p-10"
           italic={false}
         >
