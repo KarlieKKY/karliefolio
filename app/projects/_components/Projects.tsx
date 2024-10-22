@@ -54,10 +54,10 @@ export default function Projects({ showAll = false }: ProjectsProps) {
   return (
     <section className="">
       <div className="">
-        <div className="hidden md:block pt-20">
+        <div className="hidden md:block pt-16 lg:pt-20">
           <div className="flex flex-col items-center">
             <p className="text-3xl md:text-5xl lg:text-6xl">🐻‍❄️</p>
-            <h1 className="font-kanit text-3xl md:text-5xl lg:text-6xl font-bold uppercase pt-12 pb-5 tracking-wider">
+            <h1 className="font-kanit text-3xl md:text-5xl lg:text-6xl font-bold uppercase pt-9 lg:pt-12 pb-4 lg:pb-5 tracking-wider">
               my works
             </h1>
             <Button

@@ -2,9 +2,9 @@ import PhysicsSimulation from "@/components/custom_ui/physicsSchene/PhysicsSimul
 
 export default function ToolSet() {
   return (
-    <section className="my-16">
+    <section id="toolset" className="my-12 lg:my-16">
       <div className="rounded-3xl bg-[#303030]">
-        <h1 className="uppercase pt-16 font-kanit font-bold text-3xl md:text-5xl lg:text-6xl text-center">
+        <h1 className="uppercase pt-12 md:pt-14 lg:pt-16 font-kanit font-bold text-3xl md:text-5xl lg:text-6xl text-center">
           Tool Set
         </h1>
         <h2 className="pt-7 text-[#A5A0A5] font-bold text-xl md:text-2xl lg:text-3xl text-center tracking-wider">

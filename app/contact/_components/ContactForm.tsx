@@ -79,7 +79,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="my-14 rounded-2xl md:rounded-[1.5rem] p-2 md:p-4 lg:p-5 bg-[#424242]">
+    <div className="my-12 lg:my-14 rounded-2xl md:rounded-[1.5rem] p-2 md:p-4 lg:p-5 bg-[#424242]">
       <div className="w-full h-full rounded-xl md:rounded-[0.75rem] bg-[#1d1d1d] ">
         <div className="grid grid-cols-1 md:grid-cols-2 place-items-center py-12 card-particle-gradient">
           <Form {...form}>

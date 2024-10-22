@@ -3,7 +3,6 @@ import HeroSection from "@/components/sections/Header";
 import Projects from "./projects/_components/Projects";
 import ToolSet from "@/components/sections/ToolSet";
 import SiteInfo from "@/components/sections/SiteInfo";
-import AboutMe from "./about/_components/AboutMe";
 import ContactForm from "./contact/_components/ContactForm";
 import Footer from "@/components/sections/Footer";
 
@@ -15,7 +14,6 @@ export default function Home() {
         <Projects />
         <ToolSet />
         <SiteInfo />
-        {/* <AboutMe /> */}
         <ContactForm />
         <Footer />
       </div>
