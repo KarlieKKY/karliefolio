@@ -76,6 +76,29 @@
 }
 
 @layer components {
+  .card-particle-gradient {
+    @apply relative overflow-hidden;
+    background-image: radial-gradient(
+        22% 28% at 14% 50%,
+        rgba(38, 255, 53, 0.15) 7%,
+        rgba(7, 58, 255, 0) 100%
+      ),
+      radial-gradient(
+        55% 55% at 72% 23%,
+        rgba(255, 0, 190, 0.12) 24%,
+        rgba(7, 58, 255, 0) 100%
+      ),
+      radial-gradient(
+        30% 30% at 60% 80%,
+        rgba(0, 181, 255, 0.15) 24%,
+        rgba(7, 58, 255, 0) 100%
+      ),
+      radial-gradient(
+        50% 30% at 7% 90%,
+        rgba(255, 119, 0, 0.1) 7%,
+        rgba(7, 58, 255, 0) 100%
+      );
+  }
   .bg-custom-gradient {
     opacity: 80%;
     background-image: linear-gradient(

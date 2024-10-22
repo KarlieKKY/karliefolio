@@ -94,7 +94,8 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                   <div
                     className={clsx(
                       "col-span-2 bg-[#303030] rounded-3xl flex flex-col justify-between px-12 pt-8 pb-10",
-                      isEven ? "order-2" : "order-1"
+                      isEven ? "order-2" : "order-1",
+                      "card-particle-gradient"
                     )}
                   >
                     <p
