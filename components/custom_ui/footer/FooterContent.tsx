@@ -50,10 +50,10 @@ export default function FooterDesktopContent() {
               <Link href="/projects">all works</Link>
             </li>
             <li>
-              <Link href="#">tool set</Link>
+              <Link href="#toolset">tool set</Link>
             </li>
             <li>
-              <Link href="#">site technologies</Link>
+              <Link href="#siteinfo">site technologies</Link>
             </li>
             <li>
               <Link href="/contact">contact</Link>

@@ -33,10 +33,7 @@ export default function AllProjects() {
               </p>
               <div className="flex flex-row space-x-2 mb-4">
                 {project.tech.map((tech: string, idx) => (
-                  <div
-                    key={idx}
-                    // className="text-sm text-gray-600 bg-gray-200 px-2 py-1 rounded"
-                  >
+                  <div key={idx}>
                     <Image
                       src={getTechIconPath(tech)}
                       alt={`${tech} Icon`}
