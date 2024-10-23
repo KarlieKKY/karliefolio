@@ -49,7 +49,7 @@ export default function NavBar() {
           </div>
           <nav className="hidden md:flex gap-x-5">
             <Link href="/">Home</Link>
-            <Link href="/projects">Works</Link>
+            <Link href="/projects">Projects</Link>
             <Link href="/">Resume</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/about">About</Link>

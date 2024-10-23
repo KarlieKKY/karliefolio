@@ -29,15 +29,19 @@ export default function Projects({ showAll = false }: ProjectsProps) {
   const handleViewPageClick = (projectId: string | number) => {
     router.push(`/projects/${projectId}`);
   };
-
+  console.log(showAll);
   return (
     <section className="">
       <div className="">
-        <div className="hidden md:block pt-16 lg:pt-20">
+        <div
+          className={`${
+            showAll ? "px-1 md:px-3 lg:px-5" : "hidden"
+          } md:block pt-16 lg:pt-20`}
+        >
           <div className="flex flex-col items-center">
             <p className="text-3xl md:text-5xl lg:text-6xl">🐻‍❄️</p>
             <h1 className="font-kanit text-3xl md:text-5xl lg:text-6xl font-bold uppercase pt-9 lg:pt-12 pb-4 lg:pb-5 tracking-wider">
-              my works
+              projects
             </h1>
             <Button
               variant="outline"
@@ -60,8 +64,8 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                   <div
                     className={clsx(
                       "aspect-[1/0.5] lg:aspect-square relative overflow-hidden rounded-3xl",
-                      "lg:col-span-1",
-                      "order-1 lg:order-none",
+                      "lg:col-span-1 order-1",
+
                       isEven ? "lg:order-1" : "lg:order-2"
                     )}
                   >
@@ -78,8 +82,7 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                   <div
                     className={clsx(
                       "bg-[#303030] rounded-3xl flex flex-col justify-between px-12 pt-8 pb-10 space-y-2",
-                      "lg:col-span-2",
-                      "order-2 lg:order-none",
+                      "lg:col-span-2 order-2",
                       isEven ? "lg:order-2" : "lg:order-1",
                       "card-particle-gradient"
                     )}
@@ -137,11 +140,7 @@ export default function Projects({ showAll = false }: ProjectsProps) {
           </div>
         </div>
         <div className="md:hidden">
-          {showAll ? (
-            <AllProjects />
-          ) : (
-            <ProjectCarousel projectsToShow={projectsToShow} />
-          )}
+          {!showAll && <ProjectCarousel projectsToShow={projectsToShow} />}
         </div>
       </div>
     </section>

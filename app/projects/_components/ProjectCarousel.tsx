@@ -41,7 +41,7 @@ export default function ProjectCarousel({
   };
 
   return (
-    <div className="mt-4 px-1">
+    <div className="my-12 lg:my-16 px-1">
       <div
         id="default-carousel"
         className="relative w-full"
