@@ -98,10 +98,10 @@ export default function NavBar() {
             <Link href="/projects">Works /Projects</Link>
           </motion.div>
           <motion.div variants={itemVariants}>
-            <Link href="#toolset">Tool set</Link>
+            <Link href="/#toolset">Tool set</Link>
           </motion.div>
           <motion.div variants={itemVariants}>
-            <Link href="#siteinfo">About this site</Link>
+            <Link href="/#siteinfo">About this site</Link>
           </motion.div>
           <motion.div variants={itemVariants}>
             <Link href="/contact">Contact</Link>
