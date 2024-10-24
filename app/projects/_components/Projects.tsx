@@ -29,7 +29,7 @@ export default function Projects({ showAll = false }: ProjectsProps) {
   const handleViewPageClick = (projectId: string | number) => {
     router.push(`/projects/${projectId}`);
   };
-  console.log(showAll);
+
   return (
     <section className="">
       <div className="">
@@ -65,7 +65,6 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                     className={clsx(
                       "aspect-[1/0.5] lg:aspect-square relative overflow-hidden rounded-3xl",
                       "lg:col-span-1 order-1",
-
                       isEven ? "lg:order-1" : "lg:order-2"
                     )}
                   >
