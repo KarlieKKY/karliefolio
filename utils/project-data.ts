@@ -1,3 +1,5 @@
+import { thumbnailImage } from "@/assets/images";
+
 type Project = {
   id: number | string;
   name: string;
@@ -32,7 +34,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/KarlieKKY/next-chat-app.git",
     demo: "https://github.com/KarlieKKY/next-chat-app.git",
-    imageUrl: "/images/thumbnail-decorating.jpg",
+    imageUrl: thumbnailImage,
     purpose: "hello",
   },
   {
@@ -60,7 +62,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/KarlieKKY",
     demo: "https://github.com/KarlieKKY",
-    imageUrl: "/images/thumbnail-decorating.jpg",
+    imageUrl: thumbnailImage,
     purpose: "hello",
   },
   {
@@ -80,7 +82,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/tmkwong/coverlit.git",
     demo: "https://github.com/tmkwong/coverlit.git",
-    imageUrl: "/images/thumbnail-decorating.jpg",
+    imageUrl: thumbnailImage,
     purpose: "hello",
   },
   {
@@ -93,7 +95,7 @@ export const projects: Project[] = [
     tech: ["python", "pygame", "flask", "openai", "postgresql"],
     github: "https://gitfront.io/r/user-6459585/iJyMKCuL527u/Group4-CFG/",
     demo: "https://www.youtube.com/watch?v=qnKXL-lkglQ",
-    imageUrl: "/images/thumbnail-decorating.jpg",
+    imageUrl: thumbnailImage,
     purpose: "hello",
   },
   {
@@ -106,7 +108,7 @@ export const projects: Project[] = [
     tech: ["js", "vite", "reactjs", "axios"],
     github: "https://github.com/KarlieKKY/fe-nc-games",
     demo: "https://karlie-games.netlify.app/",
-    imageUrl: "/images/thumbnail-decorating.jpg",
+    imageUrl: thumbnailImage,
     purpose: "hello",
   },
   {
@@ -128,7 +130,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/KarlieKKY/nc-games.git",
     demo: "https://nc-games-s0lm.onrender.com/api",
-    imageUrl: "/images/thumbnail-decorating.jpg",
+    imageUrl: thumbnailImage,
     purpose: "hello",
   },
 ];
