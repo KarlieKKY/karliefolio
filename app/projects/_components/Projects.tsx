@@ -73,6 +73,7 @@ export default function Projects({ showAll = false }: ProjectsProps) {
                       alt="thumbnail img"
                       fill
                       className="rounded-3xl"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       style={{
                         objectFit: "cover",
                       }}

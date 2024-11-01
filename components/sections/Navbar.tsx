@@ -88,7 +88,7 @@ export default function NavBar() {
             },
           },
         }}
-        className="md:hidden bg-[#0b0b0b]/80 backdrop-blur-sm z-50 fixed top-16 w-[66%] mx-[17vw] border-2 border-white/40"
+        className="md:hidden bg-[#0b0b0b]/80 backdrop-blur-sm z-50 fixed top-16 w-[66%] mx-[17vw] border-2 border-white/40 rounded-2xl"
       >
         <div className="text-center mx-auto my-3 space-y-1">
           <motion.div variants={itemVariants}>
