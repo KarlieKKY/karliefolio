@@ -42,12 +42,15 @@ export default function ProjectCarousel({
                 <CardContent className="p-0">
                   <div className="space-y-4">
                     {/* Image Frame */}
-                    <div className="relative h-64 md:h-96 rounded-lg overflow-hidden">
+                    <div className="relative h-64 md:h-96 overflow-hidden">
                       <Image
                         src={project.imageUrl}
                         alt={project.name}
                         fill
-                        className="object-cover"
+                        className="rounded-3xl"
+                        style={{
+                          objectFit: "cover",
+                        }}
                         priority
                       />
                     </div>
