@@ -43,10 +43,12 @@ export default function NavBar() {
         className="fixed top-0 pt-5 w-full z-50"
       >
         <div className="text-xs md:text-sm lg:text-lg flex items-center justify-between bg-[#0b0b0b]/60 backdrop-blur py-2 lg:py-3 px-5 rounded-full mx-[17vw] border-2 border-white/40">
-          <div className="flex gap-3">
-            <PawPrint className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
-            <h1 className="font-roboto-condensed">Karliefolio</h1>
-          </div>
+          <Link href="/">
+            <div className="flex gap-3">
+              <PawPrint className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
+              <h1 className="font-roboto-condensed">Karliefolio</h1>
+            </div>
+          </Link>
           <nav className="hidden md:flex gap-x-5">
             <Link href="/">Home</Link>
             <Link href="/projects">Projects</Link>
