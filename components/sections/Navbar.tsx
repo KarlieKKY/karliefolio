@@ -32,6 +32,18 @@ export default function NavBar() {
     }
   });
 
+  const navLinkVariants: Variants = {
+    initial: { y: 0 },
+    hover: {
+      y: [0, "-200%", "-200%", "-100%", "-100%", "0%", "0%"],
+      transition: {
+        times: [0, 0.05, 0.33, 0.38, 0.66, 0.71, 1],
+        duration: 3,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <div>
       <motion.div
@@ -46,15 +58,77 @@ export default function NavBar() {
           <Link href="/">
             <div className="flex gap-3">
               <PawPrint className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
+              {/* <div className="group relative overflow-hidden inline-block h-6"> */}
               <h1 className="font-roboto-condensed">Karliefolio</h1>
+              {/* </div> */}
             </div>
           </Link>
           <nav className="hidden md:flex gap-x-5">
-            <Link href="/">Home</Link>
-            <Link href="/projects">Projects</Link>
-            <Link href="/">Resume</Link>
-            <Link href="/contact">Contact</Link>
-            <Link href="/about">About</Link>
+            <Link
+              href="/"
+              className="group relative overflow-hidden inline-block md:h-5 lg:h-6"
+            >
+              <div className="relative md:h-5 lg:h-6">
+                <span className="block absolute transition-transform duration-200 group-hover:-translate-y-full">
+                  Home
+                </span>
+                <span className="block transition-transform duration-200 translate-y-full group-hover:translate-y-0">
+                  Home
+                </span>
+              </div>
+            </Link>
+            <Link
+              href="/projects"
+              className="group relative overflow-hidden inline-block md:h-5 lg:h-6"
+            >
+              <div className="relative md:h-5 lg:h-6">
+                <span className="block absolute transition-transform duration-200 group-hover:-translate-y-full">
+                  Projects
+                </span>
+                <span className="block  transition-transform duration-200 translate-y-full group-hover:translate-y-0">
+                  Projects
+                </span>
+              </div>
+            </Link>
+            <Link
+              href="/"
+              className="group relative overflow-hidden inline-block md:h-5 lg:h-6"
+            >
+              <div className="relative md:h-5 lg:h-6">
+                <span className="block absolute transition-transform duration-200 group-hover:-translate-y-full">
+                  Resume
+                </span>
+                <span className="block  transition-transform duration-200 translate-y-full group-hover:translate-y-0">
+                  Resume
+                </span>
+              </div>
+            </Link>
+            <Link
+              href="/contact"
+              className="group relative overflow-hidden inline-block md:h-5 lg:h-6"
+            >
+              <div className="relative md:h-5 lg:h-6">
+                <span className="block absolute transition-transform duration-200 group-hover:-translate-y-full">
+                  Contact
+                </span>
+                <span className="block  transition-transform duration-200 translate-y-full group-hover:translate-y-0">
+                  Contact
+                </span>
+              </div>
+            </Link>
+            <Link
+              href="/about"
+              className="group relative overflow-hidden inline-block md:h-5 lg:h-6"
+            >
+              <div className="relative md:h-5 lg:h-6">
+                <span className="block absolute transition-transform duration-200 group-hover:-translate-y-full">
+                  About
+                </span>
+                <span className="block  transition-transform duration-200 translate-y-full group-hover:translate-y-0">
+                  About
+                </span>
+              </div>
+            </Link>
           </nav>
           <div className="hidden md:block">
             <Music className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />

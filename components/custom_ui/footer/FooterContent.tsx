@@ -38,7 +38,9 @@ export default function FooterDesktopContent() {
           </nav>
         </div>
         <div className="space-y-2 md:space-y-3">
-          <p className="underline">motion demo</p>
+          <Link href="https://framer-toolbox.vercel.app/" target="_blank">
+            <p className="underline">motion demo</p>
+          </Link>
           <p>download cv</p>
         </div>
         <nav aria-label="Footer navigation">
