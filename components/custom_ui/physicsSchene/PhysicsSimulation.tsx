@@ -50,10 +50,10 @@ function getRgnColor(array: HexColor[]) {
 }
 
 const PhysicsSimulation: React.FC = () => {
-  const sceneRef = useRef<HTMLDivElement>(null); // Container div reference
-  const canvasRef = useRef<HTMLCanvasElement | null>(null); // Canvas reference
-  const mouseConstraintRef = useRef<Matter.MouseConstraint | null>(null); // Mouse physics reference
-  const [isDragging, setIsDragging] = useState(false); // Dragging state
+  const sceneRef = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const mouseConstraintRef = useRef<Matter.MouseConstraint | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
     if (!sceneRef.current) return;
@@ -70,11 +70,9 @@ const PhysicsSimulation: React.FC = () => {
       Events,
     } = Matter;
 
-    // create an engine
     const engine = Engine.create();
     engine.gravity.y = 0.5;
 
-    // create a renderer
     const render = Render.create({
       element: sceneRef.current,
       engine: engine,
@@ -90,10 +88,7 @@ const PhysicsSimulation: React.FC = () => {
     canvasRef.current = render.canvas;
     render.canvas.style.pointerEvents = "auto";
 
-    // create runner
     const runner = Runner.create();
-
-    // run the renderer and the engine
     Render.run(render);
     Runner.run(runner, engine);
 
@@ -106,7 +101,6 @@ const PhysicsSimulation: React.FC = () => {
       friction: 0.3,
     };
     const walls = [
-      // Ground
       Bodies.rectangle(
         render.canvas.width / 2,
         render.canvas.height,
@@ -114,7 +108,6 @@ const PhysicsSimulation: React.FC = () => {
         50,
         wallOptions
       ),
-      // Left wall
       Bodies.rectangle(
         0,
         render.canvas.height / 2,
@@ -122,7 +115,6 @@ const PhysicsSimulation: React.FC = () => {
         render.canvas.height,
         wallOptions
       ),
-      // Right wall
       Bodies.rectangle(
         render.canvas.width,
         render.canvas.height / 2,
@@ -132,32 +124,39 @@ const PhysicsSimulation: React.FC = () => {
       ),
     ];
 
+    const calculateFontSize = (screenWidth: number) => {
+      if (screenWidth < 480) {
+        return 18;
+      } else if (screenWidth < 768) {
+        return 22;
+      } else if (screenWidth < 1024) {
+        return 24;
+      } else {
+        return 28;
+      }
+    };
+
     // Function to create word bodies
     const createWords = () => {
       return wordsToDisplay.map((word) => {
         const x = Math.random() * (render.canvas.width - 100) + 50;
         const y = Math.random() * (render.canvas.height / 2);
-        const fontSize = Math.min(30, render.canvas.width * 0.04);
+        const screenWidth = window.innerWidth;
+        const fontSize = calculateFontSize(screenWidth);
+        const boxWidth = word.length * fontSize * 0.8;
+        const boxHeight = fontSize * 1.2;
 
-        return Bodies.rectangle(
-          x,
-          y,
-          word.length * fontSize * 0.8,
-          fontSize * 1.2,
-          {
-            render: {
-              fillStyle: `rgba(${getRgnColor(rgbColors)}, 0.85)`,
-            },
-            // Add a label to the body to store the word
-            label: word,
-            // chamfer: { radius: 20 },
-            friction: 0.3,
-            restitution: 0.6,
-            density: 0.001,
-            frictionAir: 0.001,
-            chamfer: { radius: 5 },
-          }
-        );
+        return Bodies.rectangle(x, y, boxWidth, boxHeight, {
+          render: {
+            fillStyle: `rgba(${getRgnColor(rgbColors)}, 0.85)`,
+          },
+          label: word,
+          friction: 0.3,
+          restitution: 0.6,
+          density: 0.001,
+          frictionAir: 0.001,
+          chamfer: { radius: 5 },
+        });
       });
     };
 
@@ -227,20 +226,20 @@ const PhysicsSimulation: React.FC = () => {
       });
     };
 
-    // Add resize event listener
     window.addEventListener("resize", handleResize);
 
     // Custom rendering using afterRender event
     Events.on(render, "afterRender", () => {
+      const screenWidth = window.innerWidth;
+      const fontSize = calculateFontSize(screenWidth);
       const context = render.context;
-      context.font = "bold 22px Arial";
+      context.font = `bold ${fontSize}px Arial`;
       context.fillStyle = "white";
       context.textAlign = "center";
       context.textBaseline = "middle";
 
       Composite.allBodies(engine.world).forEach((body) => {
         if (!body.isStatic && body.label && typeof body.label === "string") {
-          // if (!body.isStatic && body.label) {
           const { x, y } = body.position;
           const angle = body.angle;
 
