@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Matter from "matter-js";
 
 const wordsToDisplay = [
@@ -50,7 +50,10 @@ function getRgnColor(array: HexColor[]) {
 }
 
 const PhysicsSimulation: React.FC = () => {
-  const sceneRef = useRef<HTMLDivElement>(null);
+  const sceneRef = useRef<HTMLDivElement>(null); // Container div reference
+  const canvasRef = useRef<HTMLCanvasElement | null>(null); // Canvas reference
+  const mouseConstraintRef = useRef<Matter.MouseConstraint | null>(null); // Mouse physics reference
+  const [isDragging, setIsDragging] = useState(false); // Dragging state
 
   useEffect(() => {
     if (!sceneRef.current) return;
@@ -84,6 +87,9 @@ const PhysicsSimulation: React.FC = () => {
       },
     });
 
+    canvasRef.current = render.canvas;
+    render.canvas.style.pointerEvents = "auto";
+
     // create runner
     const runner = Runner.create();
 
@@ -96,6 +102,8 @@ const PhysicsSimulation: React.FC = () => {
       isStatic: true,
       render: { fillStyle: "transparent" },
       //   label: "wall",
+      restitution: 0.5,
+      friction: 0.3,
     };
     const walls = [
       // Ground
@@ -143,6 +151,11 @@ const PhysicsSimulation: React.FC = () => {
             // Add a label to the body to store the word
             label: word,
             // chamfer: { radius: 20 },
+            friction: 0.3,
+            restitution: 0.6,
+            density: 0.001,
+            frictionAir: 0.001,
+            chamfer: { radius: 5 },
           }
         );
       });
@@ -159,6 +172,31 @@ const PhysicsSimulation: React.FC = () => {
         stiffness: 0.2,
         render: { visible: false },
       },
+    });
+    mouseConstraintRef.current = mouseConstraint;
+
+    // Scrolling
+    const handleWheel = (e: WheelEvent) => {
+      if (!isDragging) {
+        window.scrollBy(0, e.deltaY);
+      }
+    };
+
+    render.canvas.addEventListener("wheel", handleWheel, { passive: true });
+
+    // Dragging
+    Events.on(mouseConstraint, "startdrag", () => {
+      setIsDragging(true);
+      render.canvas.style.cursor = "grabbing";
+    });
+
+    Events.on(mouseConstraint, "enddrag", () => {
+      setIsDragging(false);
+      render.canvas.style.cursor = "grab";
+    });
+
+    Events.on(mouseConstraint, "mousemove", () => {
+      render.canvas.style.cursor = "grab";
     });
 
     // Add all bodies to the world
@@ -195,13 +233,14 @@ const PhysicsSimulation: React.FC = () => {
     // Custom rendering using afterRender event
     Events.on(render, "afterRender", () => {
       const context = render.context;
-      context.font = "24px Arial";
+      context.font = "bold 22px Arial";
       context.fillStyle = "white";
       context.textAlign = "center";
       context.textBaseline = "middle";
 
       Composite.allBodies(engine.world).forEach((body) => {
         if (!body.isStatic && body.label && typeof body.label === "string") {
+          // if (!body.isStatic && body.label) {
           const { x, y } = body.position;
           const angle = body.angle;
 
@@ -216,18 +255,27 @@ const PhysicsSimulation: React.FC = () => {
 
     // Cleanup function
     return () => {
+      render.canvas.removeEventListener("wheel", handleWheel);
       window.removeEventListener("resize", handleResize);
       Render.stop(render);
       Runner.stop(runner);
       Engine.clear(engine);
-      render.canvas.remove();
+      // render.canvas.remove();
       if (render.canvas.parentElement) {
         render.canvas.parentElement.removeChild(render.canvas);
       }
     };
   }, []);
 
-  return <div ref={sceneRef} style={{ width: "100%", height: "100%" }} />;
+  return (
+    <div
+      ref={sceneRef}
+      className="w-full h-full"
+      style={{
+        cursor: isDragging ? "grabbing" : "grab",
+      }}
+    />
+  );
 };
 
 export default PhysicsSimulation;

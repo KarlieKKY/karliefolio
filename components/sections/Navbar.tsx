@@ -32,18 +32,6 @@ export default function NavBar() {
     }
   });
 
-  const navLinkVariants: Variants = {
-    initial: { y: 0 },
-    hover: {
-      y: [0, "-200%", "-200%", "-100%", "-100%", "0%", "0%"],
-      transition: {
-        times: [0, 0.05, 0.33, 0.38, 0.66, 0.71, 1],
-        duration: 3,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
     <div>
       <motion.div
@@ -58,9 +46,7 @@ export default function NavBar() {
           <Link href="/">
             <div className="flex gap-3">
               <PawPrint className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
-              {/* <div className="group relative overflow-hidden inline-block h-6"> */}
               <h1 className="font-roboto-condensed">Karliefolio</h1>
-              {/* </div> */}
             </div>
           </Link>
           <nav className="hidden md:flex gap-x-5">
