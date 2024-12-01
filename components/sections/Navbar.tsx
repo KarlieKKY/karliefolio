@@ -115,6 +115,19 @@ export default function NavBar() {
                 </span>
               </div>
             </Link>
+            <Link
+              href="/more"
+              className="group relative overflow-hidden inline-block md:h-5 lg:h-6"
+            >
+              <div className="relative md:h-5 lg:h-6">
+                <span className="block absolute transition-transform duration-200 group-hover:-translate-y-full">
+                  More
+                </span>
+                <span className="block  transition-transform duration-200 translate-y-full group-hover:translate-y-0">
+                  More
+                </span>
+              </div>
+            </Link>
           </nav>
           <div className="hidden md:block">
             <Music className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
