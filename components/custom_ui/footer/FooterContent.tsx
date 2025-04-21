@@ -37,11 +37,17 @@ export default function FooterDesktopContent() {
             </ul>
           </nav>
         </div>
-        <div className="space-y-2 md:space-y-3">
+        <div className="flex flex-col gap-2 md:gap-3">
           <Link href="https://framer-toolbox.vercel.app/" target="_blank">
             <p className="underline">motion demo</p>
           </Link>
-          <p>download cv</p>
+          <Link
+            href="/resume/cv.pdf"
+            download="Karlie-Guan-resume"
+            target="_blank"
+          >
+            <p className="underline">download resume</p>
+          </Link>
         </div>
         <nav aria-label="Footer navigation">
           <ul className="flex flex-col md:flex-row gap-4 md:gap-5">

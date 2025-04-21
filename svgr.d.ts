@@ -3,6 +3,11 @@ declare module "*.png" {
   export default value;
 }
 
+declare module "*.PNG" {
+  const content: string;
+  export default content;
+}
+
 declare module "*.JPG" {
   const content: string;
   export default content;

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { Menu, X, PawPrint, Music } from "lucide-react";
+import { Menu, X, PawPrint, Music, Download } from "lucide-react";
 import {
   motion,
   useMotionValueEvent,
@@ -77,18 +77,19 @@ export default function NavBar() {
               </div>
             </Link>
             <Link
-              href="/"
+              href="/about"
               className="group relative overflow-hidden inline-block md:h-5 lg:h-6"
             >
               <div className="relative md:h-5 lg:h-6">
                 <span className="block absolute transition-transform duration-200 group-hover:-translate-y-full">
-                  Resume
+                  About
                 </span>
                 <span className="block  transition-transform duration-200 translate-y-full group-hover:translate-y-0">
-                  Resume
+                  About
                 </span>
               </div>
             </Link>
+
             <Link
               href="/contact"
               className="group relative overflow-hidden inline-block md:h-5 lg:h-6"
@@ -102,19 +103,20 @@ export default function NavBar() {
                 </span>
               </div>
             </Link>
-            <Link
-              href="/about"
+            <a
+              href="/resume/cv.pdf"
+              download="Karlie-Guan-resume"
               className="group relative overflow-hidden inline-block md:h-5 lg:h-6"
             >
               <div className="relative md:h-5 lg:h-6">
-                <span className="block absolute transition-transform duration-200 group-hover:-translate-y-full">
-                  About
+                <span className="block absolute transition-transform duration-200 group-hover:-translate-y-full flex items-center">
+                  Resume <Download className="inline-block ml-1" size={16} />
                 </span>
-                <span className="block  transition-transform duration-200 translate-y-full group-hover:translate-y-0">
-                  About
+                <span className="block transition-transform duration-200 translate-y-full group-hover:translate-y-0 flex items-center">
+                  Resume <Download className="inline-block ml-1" size={16} />
                 </span>
               </div>
-            </Link>
+            </a>
           </nav>
           <div className="hidden md:block">
             <Music className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
@@ -157,7 +159,10 @@ export default function NavBar() {
             <Link href="/">Home</Link>
           </motion.div>
           <motion.div variants={itemVariants}>
-            <Link href="/projects">Works /Projects</Link>
+            <Link href="/projects">Projects</Link>
+          </motion.div>
+          <motion.div variants={itemVariants}>
+            <Link href="/about">About me</Link>
           </motion.div>
           <motion.div variants={itemVariants}>
             <Link href="/#toolset">Tool set</Link>
@@ -169,7 +174,13 @@ export default function NavBar() {
             <Link href="/contact">Contact</Link>
           </motion.div>
           <motion.div variants={itemVariants}>
-            <Link href="/">Resume</Link>
+            <a
+              href="/resume/cv.pdf"
+              download="Karlie-Guan-resume"
+              className="flex items-center justify-center"
+            >
+              Resume <Download className="inline-block ml-1" size={14} />
+            </a>
           </motion.div>
         </div>
       </motion.nav>

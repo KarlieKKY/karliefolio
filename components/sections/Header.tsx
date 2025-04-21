@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-import bannerImage from "@/assets/images/banner.JPG";
+import bannerImage from "@/assets/images/img-banner.PNG";
 
 export default function HeroSection() {
   return (
-    <div className="relative pt-3.5">
+    <div className="relative pt-3.5 rounded-3xl">
       <div>
         <Image
           src={bannerImage}
@@ -23,7 +23,7 @@ export default function HeroSection() {
           </div>
           <div className="bg-custom-gradient inline-block py-1.5 lg:py-3.5 px-6 md:px-11">
             <h2 className="md:text-base lg:text-3xl font-bold">
-              Software Engineer
+              Software Developer
             </h2>
           </div>
         </div>
