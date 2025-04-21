@@ -3,8 +3,6 @@ import { inter, kanit, roboto, roboto_condensed, flex } from "./fonts";
 import { twMerge } from "tailwind-merge";
 import "./globals.css";
 import NavBar from "@/components/sections/Navbar";
-import Footer from "@/components/sections/Footer";
-
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {

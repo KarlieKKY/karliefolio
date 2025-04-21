@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { Menu, X, PawPrint, Music } from "lucide-react";
+import { Menu, X, PawPrint, Music, Download } from "lucide-react";
 import {
   motion,
   useMotionValueEvent,
@@ -76,19 +76,24 @@ export default function NavBar() {
                 </span>
               </div>
             </Link>
-            <Link
-              href="/"
+            <a
+              href="/resume/cv.pdf"
+              download="Karlie-Guan"
               className="group relative overflow-hidden inline-block md:h-5 lg:h-6"
             >
               <div className="relative md:h-5 lg:h-6">
                 <span className="block absolute transition-transform duration-200 group-hover:-translate-y-full">
-                  Resume
+                  <div className="">
+                    Resume
+                    <Download />
+                  </div>
                 </span>
+
                 <span className="block  transition-transform duration-200 translate-y-full group-hover:translate-y-0">
                   Resume
                 </span>
               </div>
-            </Link>
+            </a>
             <Link
               href="/contact"
               className="group relative overflow-hidden inline-block md:h-5 lg:h-6"
