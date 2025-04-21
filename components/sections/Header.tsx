@@ -1,13 +1,12 @@
 import Image from "next/image";
 
-import bannerImage from "@/assets/images/banner.JPG";
-import Aurora from "../Aurora";
+import bannerImage from "@/assets/images/img-banner.PNG";
 
 export default function HeroSection() {
   return (
     <div className="relative pt-3.5 rounded-3xl">
       <div>
-        {/* <Image
+        <Image
           src={bannerImage}
           alt="banner-img"
           className="rounded-3xl"
@@ -15,8 +14,7 @@ export default function HeroSection() {
           style={{
             objectFit: "cover",
           }}
-        /> */}
-        <Aurora colorStops={["#3A29FF", "#FF94B4", "#FF3232"]} speed={0.5} />
+        />
         <div className="text-xs absolute bottom-2 md:bottom-5 lg:bottom-8 left-1 md:left-8 lg:left-14 flex flex-col items-start gap-1 md:gap-1.5">
           <div className="bg-custom-gradient inline-block py-1 lg:py-7 px-5 md:px-10">
             <h1 className="font-kanit md:text-base lg:text-[2.5rem] font-extrabold">
@@ -25,7 +23,7 @@ export default function HeroSection() {
           </div>
           <div className="bg-custom-gradient inline-block py-1.5 lg:py-3.5 px-6 md:px-11">
             <h2 className="md:text-base lg:text-3xl font-bold">
-              Software Engineer
+              Software Developer
             </h2>
           </div>
         </div>

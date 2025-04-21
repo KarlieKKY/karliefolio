@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge";
 import "./globals.css";
 import NavBar from "@/components/sections/Navbar";
 import { Toaster } from "@/components/ui/toaster";
+import Footer from "@/components/sections/Footer";
 
 export const metadata: Metadata = {
   title: "Karliefolio",
@@ -29,6 +30,7 @@ export default function RootLayout({
       >
         <NavBar />
         {children}
+        <Footer />
         <Toaster />
       </body>
     </html>

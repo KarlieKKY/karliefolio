@@ -31,7 +31,7 @@ export default function Projects({ showAll = false }: ProjectsProps) {
   };
 
   return (
-    <section className="">
+    <section className="pb-4 md:pb-6 lg:pb-10">
       <div className="">
         <div
           className={`${

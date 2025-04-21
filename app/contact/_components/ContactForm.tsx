@@ -79,79 +79,81 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="my-12 lg:my-14 rounded-2xl md:rounded-[1.5rem] p-2 md:p-4 lg:p-5 bg-[#424242]">
-      <div className="w-full h-full rounded-xl md:rounded-[0.75rem] bg-[#1d1d1d] ">
-        <div className="grid grid-cols-1 md:grid-cols-2 place-items-center py-12 card-particle-gradient">
-          <Form {...form}>
-            <form
-              ref={formRef}
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="w-3/4 space-y-4 md:order-1 order-2"
-            >
-              <FormField
-                name="username"
-                render={({ field }) => (
-                  <FormItem className="space-y-4 w-3/4">
-                    <FormLabel className="text-xl">Name:</FormLabel>
-                    <FormControl>
-                      <Input
-                        className="bg-[#303030] border-[#9DFF85]"
-                        placeholder="Your Name"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage className="text-xs text-red-600" />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem className="space-y-4 w-3/4">
-                    <FormLabel className="text-xl">Email:</FormLabel>
-                    <FormControl>
-                      <Input
-                        className="bg-[#303030] border-[#7ACCFF]"
-                        placeholder="Email Address"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage className="text-xs text-red-600" />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem className="space-y-4">
-                    <FormLabel className="text-xl">Message:</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        className="bg-[#303030] border-[#FFF587] h-60"
-                        placeholder="Type your message here."
-                        id="message"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage className="text-xs text-red-600" />
-                  </FormItem>
-                )}
-              />
-              <Button
-                type="submit"
-                className="font-semibold"
-                variant="destructive"
+    <div className="pt-3.5">
+      <div className="my-12 lg:my-14 rounded-2xl md:rounded-[1.5rem] p-2 md:p-4 lg:p-5 bg-[#424242]">
+        <div className="w-full h-full rounded-xl md:rounded-[0.75rem] bg-[#1d1d1d] ">
+          <div className="grid grid-cols-1 md:grid-cols-2 place-items-center py-12 card-particle-gradient">
+            <Form {...form}>
+              <form
+                ref={formRef}
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="w-3/4 space-y-4 md:order-1 order-2"
               >
-                Send
-              </Button>
-            </form>
-          </Form>
-          <div className="md:order-2 order-1">
-            <h1 className="uppercase font-kanit font-bold text-3xl md:text-5xl lg:text-6xl">
-              Contact Me
-            </h1>
+                <FormField
+                  name="username"
+                  render={({ field }) => (
+                    <FormItem className="space-y-4 w-3/4">
+                      <FormLabel className="text-xl">Name:</FormLabel>
+                      <FormControl>
+                        <Input
+                          className="bg-[#303030] border-[#9DFF85]"
+                          placeholder="Your Name"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage className="text-xs text-red-600" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem className="space-y-4 w-3/4">
+                      <FormLabel className="text-xl">Email:</FormLabel>
+                      <FormControl>
+                        <Input
+                          className="bg-[#303030] border-[#7ACCFF]"
+                          placeholder="Email Address"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage className="text-xs text-red-600" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem className="space-y-4">
+                      <FormLabel className="text-xl">Message:</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          className="bg-[#303030] border-[#FFF587] h-60"
+                          placeholder="Type your message here."
+                          id="message"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage className="text-xs text-red-600" />
+                    </FormItem>
+                  )}
+                />
+                <Button
+                  type="submit"
+                  className="font-semibold"
+                  variant="destructive"
+                >
+                  Send
+                </Button>
+              </form>
+            </Form>
+            <div className="md:order-2 order-1">
+              <h1 className="uppercase font-kanit font-bold text-3xl md:text-5xl lg:text-6xl">
+                Contact Me
+              </h1>
+            </div>
           </div>
         </div>
       </div>
